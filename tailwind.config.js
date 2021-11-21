@@ -29,6 +29,7 @@ module.exports = {
         desktopHero: "url('/src/assets/home/desktop/image-hero.jpg')",
         tabletHero: "url('/src/assets/home/tablet/image-header.jpg')",
         mobileHero: "url('/src/assets/home/mobile/image-header.jpg')",
+        patternCircles: "url('/src/assets/home/desktop/pattern-circles.svg')",
       },
 
       letterSpacing: {
@@ -41,11 +42,21 @@ module.exports = {
       },
 
       minHeight: {
-        80: "80vh",
+        small: "50.7rem",
+        mid: "63.9rem",
+        large: "63.3rem",
+      },
+
+      spacing: {
+        100: "32rem",
+        150: "38rem",
+        200: "56rem",
       },
 
       backgroundPosition: {
         "top-4": "center 85%",
+        "top-5": "50% -16rem",
+        "top-6": "50% -25rem",
       },
     },
   },
