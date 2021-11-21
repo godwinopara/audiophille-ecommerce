@@ -1,13 +1,38 @@
-import React from "react";
+import Layout from "../components/layout/Layout";
+import Button from "../components/utilities/Button";
 
 const Home = () => {
   return (
-    <div>
-      <br />
-      Home Headphones Speakers Earphones
-      <br />
-      New product XX99 Mark II Headphones Experience natural, lifelike audio and exceptional build
-      quality made for the passionate music enthusiast.
+    <Layout>
+      {/* Hero Begin */}
+      <section
+        className="
+      bg-black-200 min-h-screen bg-mobileHero 
+        bg-cover bg-top-4 bg-no-repeat 
+        flex items-center justify-center 
+        mb-16
+        md:bg-tabletHero
+        lg:bg-desktopHero
+        lg:text-left
+        lg:bg-auto
+        lg:mx-auto
+      "
+      >
+        {/* Hero content Wrapper */}
+
+        <div className="px-14 text-center md:w-3/5 lg:max-w-screen-xxl lg:w-1/2 lg:text-left">
+          <p className="text-2xl text-white-100 tracking-veryWide mb-7 opacity-50">NEW PRODUCT</p>
+          <h1 className="uppercase text-white-100 mb-10 text-6xl leading-40 font-bold md:text-8xl md:leading-58">
+            XX99 Mark II Headphones
+          </h1>
+          <p className="text-white-300 text-2xl mb-11 leading-10 opacity-75 mix-blend-normal">
+            Experience natural, lifelike audio and exceptional build quality made for the passionate
+            music enthusiast.
+          </p>
+          <Button classList="bg-brown-100 text-white-100" />
+        </div>
+      </section>{" "}
+      {/*  Hero Section End */}
       <br />
       See product
       <br />
@@ -44,7 +69,7 @@ const Home = () => {
       audio. Come and visit our demo facility - we’re open 7 days a week.
       <br />
       Copyright 2021. All Rights Reserved
-    </div>
+    </Layout>
   );
 };
 
