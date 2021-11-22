@@ -2,8 +2,11 @@ import React, { Fragment } from "react";
 import Logo from "../../assets/shared/desktop/logo.svg";
 import IconCart from "../../assets/shared/desktop/icon-cart.svg";
 import Hamburger from "../../assets/shared/tablet/icon-hamburger.svg";
+import List from "./List";
 
 const Nav = () => {
+  const Links = ["HOME", "HEADPHONES", "SPEAKER", "EARPHONES"];
+
   return (
     <Fragment>
       <nav
@@ -17,26 +20,27 @@ const Nav = () => {
         lg:px-0 
         "
       >
-        {/* Hamburger Menu */}
+        {/* HAMBURGER MENU*/}
 
         <div className="cursor-pointer flex items-center md:mr-20 lg:hidden">
           <img src={Hamburger} alt="" />
         </div>
 
-        {/* Logo */}
+        {/* LOGO */}
 
         <a href="/">
           <img src={Logo} alt="logo" />
         </a>
 
-        {/* Nav Menu */}
+        {/* NAV MENU */}
 
         <ul className="hidden lg:flex lg:item-center lg:ml-auto">
-          <List text="Home" link />
-          <List text="Headphones" />
-          <List text="Speakers" />
-          <List text="Earphones" />
+          {Links.map((link, id) => {
+            return <List text={link} classList="mr-14" />;
+          })}
         </ul>
+
+        {/* NAV FOR TABLET AND MOBILE */}
         <ul className="hidden">
           <List text="Home" />
           <List text="Headphones" />
@@ -55,13 +59,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-const List = ({ text, link }) => {
-  return (
-    <li className="text-white-300 text-xl font-bold uppercase mr-14">
-      <a className="hover:text-brown-100" href={`/${link}`}>
-        {text}
-      </a>
-    </li>
-  );
-};

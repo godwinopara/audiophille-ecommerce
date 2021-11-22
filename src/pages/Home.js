@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import Button from "../components/shared/Button";
 import Card from "../components/shared/Card";
 import IMG from "../components/images";
+import Picture from "../components/shared/Picture";
 
 const Home = () => {
   return (
@@ -46,33 +47,35 @@ const Home = () => {
       {/*  Hero Section End */}
       {/* ********************
        ************************/}
-      {/* AUDIO CATEGORIES */}
+      {/* CATEGORIES */}
       <section className="px-10 grid gap-y-28 md:grid-cols-3 mb-48 md:gap-x-4 md:gap-y-0 lg:max-w-screen-xxl lg:mx-auto lg:px-0">
         <Card img={IMG.shared.headphoneThumbnail} categoryName="HEADPHONES" />
         <Card img={IMG.shared.speakerThumbnail} categoryName="HEADPHONES" />
         <Card img={IMG.shared.earphoneThumbnail} categoryName="HEADPHONES" />
       </section>
-      {/* AUDIO CATEGORIES END */}
+      {/* CATEGORIES END */}
       {/* ********************** */}
+      {/* ZX9 SPEAKER */}
       <section
         className="
         rounded-xl
-      px-14 py-24 
-      bg-brown-100 
-      bg-patternCircles bg-cover bg-top-5 bg-no-repeat
-      md:bg-top-6
-      lg:bg-left lg:bg-auto
-      lg:pb-0
-      lg:h-200
-      overflow-hidden
-      
-      max-w-screen-xxl mx-auto
-      "
+        mb-10
+        mx-10
+        px-14 py-24 
+      bg-brown-100
+        bg-patternCircles bg-cover bg-top-5 bg-no-repeat 
+        md:bg-top-6 md:mb-14
+        lg:bg-left-bottom-100 lg:bg-auto
+        lg:pb-0 lg:mb-16
+        lg:h-200
+        lg:overflow-hidden
+        lg:max-w-screen-xxl lg:mx-auto
+        "
       >
         <div className="lg:flex lg:justify-between lg:w-4/5 mx-auto ">
           <picture className="flex items-center justify-center">
-            <source media="(min-width:1024px)" srcset={IMG.home.speakerDesktop} />
-            <source media="(min-width:765px)" srcset={IMG.home.speakerTablet} />
+            <source media="(min-width:1024px)" srcSet={IMG.home.speakerDesktop} />
+            <source media="(min-width:765px)" srcSet={IMG.home.speakerTablet} />
             <img src={IMG.home.speakerMobile} alt="" className="w-72 lg:w-150 lg:mt-20" />
           </picture>
 
@@ -85,37 +88,40 @@ const Home = () => {
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable
               sound.
             </p>
-            <Button classList="bg-black-100 text-white-100 " />
+            <Button classList="bg-black-100 text-white-100 hover:opacity-80" />
           </div>
         </div>
       </section>
-      <br />
-      See product
-      <br />
-      ZX7 speaker See product
-      <br />
-      YX1 earphones See product
-      <div>
-        Bringing you the best audio gear Located at the heart of New York City, Audiophile is the
-        premier store for high end headphones, earphones, speakers, and audio accessories. We have a
-        large showroom and luxury demonstration rooms available for you to browse and experience a
-        wide range of our products. Stop by our store to meet some of the fantastic people who make
-        Audiophile the best place to buy your portable audio equipment.
-      </div>
-      <div>
-        Home
-        <br />
-        Headphones
-        <br />
-        Speakers
-        <br />
-        Earphones
-      </div>
-      Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music
-      lovers and sound specialists who are devoted to helping you get the most out of personal
-      audio. Come and visit our demo facility - we’re open 7 days a week.
-      <br />
-      Copyright 2021. All Rights Reserved
+      {/* ZX9 SPEAKER END */}
+      {/* *************** */}
+      {/* ZX7 SPEAKER */}
+      <section
+        className="
+      mx-10 mb-10 rounded-xl  pl-10
+      bg-zx7SpeakerMobile bg-cover
+       lg:max-w-screen-xxl lg:mx-auto py-40
+       "
+      >
+        <h2 className="uppercase font-bold text-4xxl tracking-widest mb-12">ZX7 speaker </h2>
+        <Button classList="border border-black-200 hover:bg-black-200 hover:text-white-300" />
+      </section>
+      {/* ZX7 SPEAKER END */}
+      {/*******************/}
+      {/* YXI EARPHONES */}
+      <section className="px-10">
+        <Picture
+          desktopImg={IMG.home.yx1Earphone}
+          tabletImg={IMG.home.yx1EarphoneTablet}
+          mobileImg={IMG.home.yx1EarphoneMobile}
+          classList="rounded-xl"
+        />
+        <div className="py-16 pl-10 mt-10 mb-48 rounded-xl bg-white-100">
+          <h2 className="uppercase mb-12 text-4xxl tracking-widest font-bold">YX1 earphones</h2>
+          <Button classList="border border-black-200 hover:bg-black-200 hover:text-white-300" />
+        </div>
+      </section>
+      {/* YXI EARPHONES END */}
+      {/* ***************** */}
     </Layout>
   );
 };

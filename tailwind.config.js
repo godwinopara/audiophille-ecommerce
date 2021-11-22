@@ -30,6 +30,9 @@ module.exports = {
         tabletHero: "url('/src/assets/home/tablet/image-header.jpg')",
         mobileHero: "url('/src/assets/home/mobile/image-header.jpg')",
         patternCircles: "url('/src/assets/home/desktop/pattern-circles.svg')",
+        zx7Speaker: "url('/src/assets/home/desktop/image-speaker-zx7.jpg')",
+        zx7SpeakerTablet: "url('/src/assets/home/tablet/image-speaker-zx7.jpg')",
+        zx7SpeakerMobile: "url('/src/assets/home/mobile/image-speaker-zx7.jpg')",
       },
 
       letterSpacing: {
@@ -53,10 +56,15 @@ module.exports = {
         200: "56rem",
       },
 
+      fontSize: {
+        "4xxl": ["2.8rem", "3.825rem"],
+      },
+
       backgroundPosition: {
         "top-4": "center 85%",
         "top-5": "50% -16rem",
         "top-6": "50% -25rem",
+        "left-bottom-100": "left -85% top 15%",
       },
     },
   },

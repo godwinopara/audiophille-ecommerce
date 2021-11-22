@@ -4,7 +4,6 @@ function App() {
   return (
     <div className="App">
       <Home />
-      <p>hello from react app</p>
     </div>
   );
 }
