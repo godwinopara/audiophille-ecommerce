@@ -3,15 +3,28 @@ import IMG from "../images";
 
 const About = () => {
   return (
-    <section className="px-10 mb-48">
+    <section
+      className="
+      px-10 mb-48 
+      lg:flex lg:flex-row-reverse lg:items-center lg:justify-between
+      lg:max-w-screen-xxl lg:mx-auto
+      xl:px-0
+    "
+    >
       <Picture
         desktopImg={IMG.shared.aboutImg}
         tabletImg={IMG.shared.aboutImgTablet}
         mobileImg={IMG.shared.aboutImgMobile}
-        classList="rounded-xl"
+        classList="rounded-xl flex-1"
       />
-      <div className="mt-16 text-center">
-        <h2 className="font-bold uppercase text-4xxl mb-12">
+      <div
+        className="
+        mt-16 text-center 
+        md:w-9/12 md:mx-auto md:mt-24
+        lg:text-left lg:w-2/5 lg:ml-0
+        "
+      >
+        <h2 className="font-bold uppercase text-4xxl mb-12 md:text-6xl">
           Bringing you the <span className="text-brown-100">best</span> audio gear{" "}
         </h2>
         <p className="opacity-50">

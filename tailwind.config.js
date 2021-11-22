@@ -8,7 +8,7 @@ module.exports = {
     colors: {
       brown: {
         100: "#D87D4A",
-        200: "FB8F85",
+        200: "#FB8F85",
       },
       black: {
         100: "#101010",

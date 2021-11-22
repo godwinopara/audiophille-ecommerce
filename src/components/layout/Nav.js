@@ -36,7 +36,7 @@ const Nav = () => {
 
         <ul className="hidden lg:flex lg:item-center lg:ml-auto">
           {Links.map((link, id) => {
-            return <List text={link} classList="mr-14" />;
+            return <List key={id} text={link} classList="mr-14" />;
           })}
         </ul>
 

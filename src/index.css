@@ -14,10 +14,12 @@ body {
   line-height: 2.5rem;
 }
 
+/* NAV BAR CONTAINER */
 .nav-bar {
   position: relative;
 }
 
+/* DISPLAY VERTICAL LINE UNDER THE NAV BAR */
 .nav-bar::before {
   content: "";
   position: absolute;
@@ -27,4 +29,54 @@ body {
   opacity: 0.2;
   mix-blend-mode: normal;
   bottom: -16%;
+}
+
+/* SVG */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .social-icons {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .social-icons {
+    margin-top: -14rem;
+  }
+}
+
+.social-icons li {
+  height: 2.4rem;
+  width: 2.4rem;
+  background-color: white;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  cursor: pointer;
+}
+
+.social-icons li:hover {
+  background-color: #d87d4a;
+}
+
+.social-icons li:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.facebook {
+  mask: url("./assets/shared/desktop/icon-facebook.svg");
+}
+
+.twitter {
+  mask: url("./assets/shared/desktop/icon-twitter.svg");
+}
+
+.instagram {
+  mask: url("./assets/shared/desktop/icon-instagram.svg");
 }
