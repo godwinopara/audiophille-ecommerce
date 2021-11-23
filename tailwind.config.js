@@ -62,12 +62,23 @@ module.exports = {
         xx59Mobile:
           "url('/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg')",
 
-        // YXI EARPHONE
+        // EARPHONE PAGE IMAGES
         yx1: "url('/src/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg')",
         yx1Tablet:
           "url('/src/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg')",
         yx1Mobile:
           "url('/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg')",
+
+        // SPEAKER PAGE IMAGES
+        //SPEAKER ZX9
+        ZX9: "url('/src/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg')",
+        ZX9Tab: "url('/src/assets/product-zx9-speaker/tablet/image-category-page-preview.jpg')",
+        ZX9Mobile: "url('/src/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg')",
+
+        //SPEAKER ZX7
+        ZX7: "url('/src/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg')",
+        ZX7Tab: "url('/src/assets/product-zx7-speaker/tablet/image-category-page-preview.jpg')",
+        ZX7Mobile: "url('/src/assets/product-zx7-speaker/mobile/image-category-page-preview.jpg')",
       },
 
       letterSpacing: {
