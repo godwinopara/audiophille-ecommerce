@@ -42,17 +42,32 @@ module.exports = {
         //Headphone page images
 
         // XX99 Mark One HEADPHONE
-        xx99MarkOne: "url('/src/assets/shared/desktop/image-xx99-mark-one-headphones.jpg')",
-        xx99MarkOneTablet: "url('/src/assets/shared/tablet/image-xx99-mark-one-headphones.jpg')",
-        xx99MarkOneMobile: "url('/src/assets/shared/mobile/image-xx99-mark-one-headphones.jpg')",
+        xx99MarkOne:
+          "url('/src/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg')",
+        xx99MarkOneTablet:
+          "url('/src/assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg')",
+        xx99MarkOneMobile:
+          "url('/src/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg')",
         // XX99 MARK TWO HEADPHONE
-        xx99MarkTwo: "url('/src/assets/shared/desktop/image-xx99-mark-two-headphones.jpg')",
-        xx99MarkTwoTablet: "url('/src/assets/shared/tablet/image-xx99-mark-two-headphones.jpg')",
-        xx99MarkTwoMobile: "url('/src/assets/shared/mobile/image-xx99-mark-two-headphones.jpg')",
+        xx99MarkTwo:
+          "url('/src/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg')",
+        xx99MarkTwoTablet:
+          "url('/src/assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg')",
+        xx99MarkTwoMobile:
+          "url('/src/assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg')",
         //XX59 HEADPHONE
-        xx59: "url('/src/assets/shared/desktop/image-xx59-headphones.jpg')",
-        xx59Tablet: "url('/src/assets/shared/tablet/image-xx59-headphones.jpg')",
-        xx59Mobile: "url('/src/assets/shared/mobile/image-xx59-headphones.jpg')",
+        xx59: "url('/src/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg')",
+        xx59Tablet:
+          "url('/src/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg')",
+        xx59Mobile:
+          "url('/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg')",
+
+        // YXI EARPHONE
+        yx1: "url('/src/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg')",
+        yx1Tablet:
+          "url('/src/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg')",
+        yx1Mobile:
+          "url('/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg')",
       },
 
       letterSpacing: {
