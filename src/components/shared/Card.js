@@ -2,7 +2,7 @@ import ShopLink from "./ShopLink";
 
 const Card = ({ img, categoryName }) => {
   return (
-    <div className="bg-white-100 rounded-xl p-10 relative h-64  flex flex-col justify-center items-center">
+    <li className="bg-white-100 rounded-xl p-10 relative h-64  flex flex-col justify-center items-center">
       <img
         src={img}
         alt="product card"
@@ -11,7 +11,7 @@ const Card = ({ img, categoryName }) => {
       />
       <p className="font-bold text-2xl tracking-widest mb-7 mt-14">{categoryName}</p>
       <ShopLink />
-    </div>
+    </li>
   );
 };
 

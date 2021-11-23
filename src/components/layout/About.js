@@ -1,5 +1,5 @@
 import Picture from "../shared/Picture";
-import IMG from "../images";
+import IMG from "../shared/images";
 
 const About = () => {
   return (

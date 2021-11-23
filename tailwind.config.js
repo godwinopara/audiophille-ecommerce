@@ -25,7 +25,12 @@ module.exports = {
         xxl: "1100px",
       },
 
+      backgroundSize: {
+        80: "80%",
+      },
+
       backgroundImage: {
+        // Home Image
         desktopHero: "url('/src/assets/home/desktop/image-hero.jpg')",
         tabletHero: "url('/src/assets/home/tablet/image-header.jpg')",
         mobileHero: "url('/src/assets/home/mobile/image-header.jpg')",
@@ -33,6 +38,21 @@ module.exports = {
         zx7Speaker: "url('/src/assets/home/desktop/image-speaker-zx7.jpg')",
         zx7SpeakerTablet: "url('/src/assets/home/tablet/image-speaker-zx7.jpg')",
         zx7SpeakerMobile: "url('/src/assets/home/mobile/image-speaker-zx7.jpg')",
+
+        //Headphone page images
+
+        // XX99 Mark One HEADPHONE
+        xx99MarkOne: "url('/src/assets/shared/desktop/image-xx99-mark-one-headphones.jpg')",
+        xx99MarkOneTablet: "url('/src/assets/shared/tablet/image-xx99-mark-one-headphones.jpg')",
+        xx99MarkOneMobile: "url('/src/assets/shared/mobile/image-xx99-mark-one-headphones.jpg')",
+        // XX99 MARK TWO HEADPHONE
+        xx99MarkTwo: "url('/src/assets/shared/desktop/image-xx99-mark-two-headphones.jpg')",
+        xx99MarkTwoTablet: "url('/src/assets/shared/tablet/image-xx99-mark-two-headphones.jpg')",
+        xx99MarkTwoMobile: "url('/src/assets/shared/mobile/image-xx99-mark-two-headphones.jpg')",
+        //XX59 HEADPHONE
+        xx59: "url('/src/assets/shared/desktop/image-xx59-headphones.jpg')",
+        xx59Tablet: "url('/src/assets/shared/tablet/image-xx59-headphones.jpg')",
+        xx59Mobile: "url('/src/assets/shared/mobile/image-xx59-headphones.jpg')",
       },
 
       letterSpacing: {
@@ -41,6 +61,7 @@ module.exports = {
 
       lineHeight: {
         40: "4rem",
+        44: "4.4rem",
         58: "5.8rem",
       },
 
@@ -58,6 +79,7 @@ module.exports = {
 
       fontSize: {
         "4xxl": ["2.8rem", "3.825rem"],
+        "6xxl": ["4rem", "4.4rem"],
       },
 
       backgroundPosition: {

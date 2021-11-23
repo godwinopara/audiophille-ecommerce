@@ -1,5 +1,5 @@
 import React from "react";
-import IMG from "../images";
+import IMG from "../shared/images";
 import List from "./List";
 
 const Footer = () => {

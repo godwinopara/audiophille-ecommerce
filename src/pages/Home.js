@@ -1,8 +1,8 @@
 import Layout from "../components/layout/Layout";
 import Button from "../components/shared/Button";
-import Card from "../components/shared/Card";
-import IMG from "../components/images";
+import IMG from "../components/shared/images";
 import Picture from "../components/shared/Picture";
+import CategoryList from "../components/shared/CategoryList";
 
 const Home = () => {
   return (
@@ -25,8 +25,8 @@ const Home = () => {
           {/* Inner Wrapper */}
           <div className="px-10 text-center md:w-3/5  md:mx-auto mr-auto xl:text-left xl:w-2/5 xl:mx-0 xl:mr-auto xl:px-0">
             {/* Hero Content Start*/}
-            <p className="text-white-100 tracking-veryWide mb-7 opacity-50">NEW PRODUCT</p>
-            <h1 className="uppercase text-white-100 mb-10 text-6xl leading-40 font-bold md:text-8xl md:leading-58">
+            <p className="text-white-300 tracking-veryWide mb-7 opacity-50">NEW PRODUCT</p>
+            <h1 className="uppercase text-white-300 mb-10 text-6xl leading-40 font-bold md:text-8xl md:leading-58">
               XX99 Mark II Headphones
             </h1>
             <p className="text-white-300 mb-11 leading-10 opacity-75 mix-blend-normal">
@@ -41,16 +41,14 @@ const Home = () => {
         </div>
       </section>
       {/*  Hero Section End */}
-      {/* ********************
-       ************************/}
-      {/* CATEGORIES */}
-      <section className="px-10 grid gap-y-28 md:grid-cols-3 mb-48 md:gap-x-4 md:gap-y-0 lg:max-w-screen-xxl lg:mx-auto xl:px-0">
-        <Card img={IMG.shared.headphoneThumbnail} categoryName="HEADPHONES" />
-        <Card img={IMG.shared.speakerThumbnail} categoryName="HEADPHONES" />
-        <Card img={IMG.shared.earphoneThumbnail} categoryName="HEADPHONES" />
+      {/* ********************************************/}
+      {/* CATEGORIES OF THE DIFFERENT PRODUCT IN THE STORE*/}
+      <section>
+        <CategoryList />
       </section>
       {/* CATEGORIES END */}
-      {/* ********************** */}
+
+      {/* ************************************************ */}
       {/* ZX9 SPEAKER */}
       <section
         className="
@@ -89,7 +87,7 @@ const Home = () => {
         </div>
       </section>
       {/* ZX9 SPEAKER END */}
-      {/* *************** */}
+      {/* ***************************************************************** */}
       {/* ZX7 SPEAKER */}
       <section
         className="
@@ -105,8 +103,8 @@ const Home = () => {
         <Button classList="border border-black-200 hover:bg-black-200 hover:text-white-300" />
       </section>
       {/* ZX7 SPEAKER END */}
-      {/*******************/}
-      {/* YXI EARPHONES */}
+      {/****************************************************************************/}
+      {/* YXI EARPHONES BEGIN*/}
       <section
         className="
         px-10 mb-36
@@ -138,7 +136,7 @@ const Home = () => {
         </div>
       </section>
       {/* YXI EARPHONES END */}
-      {/* ***************** */}
+      {/* ************************************************************************************/}
     </Layout>
   );
 };
