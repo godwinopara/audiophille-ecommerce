@@ -6,8 +6,8 @@ const About = () => {
     <section
       className="
       px-10 mb-48 
-      lg:flex lg:flex-row-reverse lg:items-center lg:justify-between
-      lg:max-w-screen-xxl lg:mx-auto
+      xl:flex xl:flex-row-reverse xl:items-center xl:justify-between
+      xl:max-w-screen-xxl xl:mx-auto
       xl:px-0
     "
     >
@@ -21,7 +21,7 @@ const About = () => {
         className="
         mt-16 text-center 
         md:w-9/12 md:mx-auto md:mt-24
-        lg:text-left lg:w-2/5 lg:ml-0
+        xl:text-left xl:w-2/5 xl:ml-0
         "
       >
         <h2 className="font-bold uppercase text-4xxl mb-12 md:text-6xl">

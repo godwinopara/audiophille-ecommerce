@@ -3,7 +3,7 @@ import ProductPage from "../components/product/ProductPage";
 
 const Speaker = () => {
   return (
-    <ProductPage>
+    <ProductPage productPageName="SPEAKERS">
       {/* SPEAKER ZX9 BEGIN */}
       <ProductList
         productName="zx9"

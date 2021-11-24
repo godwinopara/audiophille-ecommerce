@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const List = ({ text, link, classList }) => {
+const List = ({ text, link = "", classList }) => {
   return (
     <li className={`text-white-300 text-xl font-bold uppercase ${classList}`}>
-      <a className="hover:text-brown-100" href={`/${link}`}>
+      <Link className="hover:text-brown-100" to={link}>
         {text}
-      </a>
+      </Link>
     </li>
   );
 };

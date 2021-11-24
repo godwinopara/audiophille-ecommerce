@@ -3,6 +3,10 @@ import Button from "../components/shared/Button";
 import IMG from "../components/shared/images";
 import Picture from "../components/shared/Picture";
 import CategoryList from "../components/shared/CategoryList";
+import NewProduct from "../components/shared/NewProduct";
+import Heading1 from "../components/shared/Heading1";
+import Description from "../components/shared/Description";
+import Heading2 from "../components/shared/Heading2";
 
 const Home = () => {
   return (
@@ -25,15 +29,15 @@ const Home = () => {
           {/* Inner Wrapper */}
           <div className="px-10 text-center md:w-3/5  md:mx-auto mr-auto xl:text-left xl:w-2/5 xl:mx-0 xl:mr-auto xl:px-0">
             {/* Hero Content Start*/}
-            <p className="text-white-300 tracking-veryWide mb-7 opacity-50">NEW PRODUCT</p>
-            <h1 className="uppercase text-white-300 mb-10 text-6xl leading-40 font-bold md:text-8xl md:leading-58">
-              XX99 Mark II Headphones
-            </h1>
-            <p className="text-white-300 mb-11 leading-10 opacity-75 mix-blend-normal">
+            <NewProduct textStyle="text-white-300 opacity-50" />
+            <Heading1 text="XX99 Mark II Headphones" />
+            <Description
+              classList="text-white-300"
+              description="
               Experience natural, lifelike audio and exceptional build quality made for the
               passionate music enthusiast.
-            </p>
-
+            "
+            />
             <Button classList="bg-brown-100 text-white-100 hover:bg-brown-200 " />
             {/* Hero Content End */}
           </div>
@@ -74,10 +78,12 @@ const Home = () => {
           />
 
           <div className="text-center lg:text-left lg:ml-20 xl:ml-0">
-            <h2 className="text-6xl leading-40 tracking-widest my-10 text-white-300 uppercase md:mt-28">
-              ZX9 <br />
-              speaker
-            </h2>
+            <Heading2
+              productName="ZX9"
+              productCategory="speaker"
+              classList="text-white-300 md:mt-28"
+            />
+
             <p className="mb-10 text-white-300 md:max-w-lg mx-auto">
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable
               sound.

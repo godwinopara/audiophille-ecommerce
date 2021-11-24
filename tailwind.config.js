@@ -38,47 +38,6 @@ module.exports = {
         zx7Speaker: "url('/src/assets/home/desktop/image-speaker-zx7.jpg')",
         zx7SpeakerTablet: "url('/src/assets/home/tablet/image-speaker-zx7.jpg')",
         zx7SpeakerMobile: "url('/src/assets/home/mobile/image-speaker-zx7.jpg')",
-
-        //Headphone page images
-
-        // XX99 Mark One HEADPHONE
-        xx99MarkOne:
-          "url('/src/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg')",
-        xx99MarkOneTablet:
-          "url('/src/assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg')",
-        xx99MarkOneMobile:
-          "url('/src/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg')",
-        // XX99 MARK TWO HEADPHONE
-        xx99MarkTwo:
-          "url('/src/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg')",
-        xx99MarkTwoTablet:
-          "url('/src/assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg')",
-        xx99MarkTwoMobile:
-          "url('/src/assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg')",
-        //XX59 HEADPHONE
-        xx59: "url('/src/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg')",
-        xx59Tablet:
-          "url('/src/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg')",
-        xx59Mobile:
-          "url('/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg')",
-
-        // EARPHONE PAGE IMAGES
-        yx1: "url('/src/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg')",
-        yx1Tablet:
-          "url('/src/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg')",
-        yx1Mobile:
-          "url('/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg')",
-
-        // SPEAKER PAGE IMAGES
-        //SPEAKER ZX9
-        ZX9: "url('/src/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg')",
-        ZX9Tab: "url('/src/assets/product-zx9-speaker/tablet/image-category-page-preview.jpg')",
-        ZX9Mobile: "url('/src/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg')",
-
-        //SPEAKER ZX7
-        ZX7: "url('/src/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg')",
-        ZX7Tab: "url('/src/assets/product-zx7-speaker/tablet/image-category-page-preview.jpg')",
-        ZX7Mobile: "url('/src/assets/product-zx7-speaker/mobile/image-category-page-preview.jpg')",
       },
 
       letterSpacing: {
@@ -86,6 +45,7 @@ module.exports = {
       },
 
       lineHeight: {
+        36: "3.6rem",
         40: "4rem",
         44: "4.4rem",
         58: "5.8rem",
@@ -104,8 +64,11 @@ module.exports = {
       },
 
       fontSize: {
+        "3xxl": ["2.4rem", "3.6rem"],
         "4xxl": ["2.8rem", "3.825rem"],
+        "5xxl": ["3.6rem", "4rem"],
         "6xxl": ["4rem", "4.4rem"],
+        "7xxl": ["5.6rem", "5.8rem"],
       },
 
       backgroundPosition: {

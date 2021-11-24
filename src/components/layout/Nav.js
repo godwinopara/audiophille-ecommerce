@@ -5,7 +5,7 @@ import Hamburger from "../../assets/shared/tablet/icon-hamburger.svg";
 import List from "./List";
 
 const Nav = () => {
-  const Links = ["HOME", "HEADPHONES", "SPEAKER", "EARPHONES"];
+  const Links = ["home", "headphone", "speaker", "earphone"];
 
   return (
     <Fragment>
@@ -36,7 +36,13 @@ const Nav = () => {
 
         <ul className="hidden lg:flex lg:item-center lg:ml-auto">
           {Links.map((link, id) => {
-            return <List key={id} text={link} classList="mr-14" />;
+            if (id === 0) {
+              return <List key={id} text={link.toUpperCase()} link="/" classList="mr-14" />;
+            } else {
+              return (
+                <List key={id} text={link.toUpperCase()} link={`/${link}`} classList="mr-14" />
+              );
+            }
           })}
         </ul>
 

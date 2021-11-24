@@ -17,9 +17,8 @@ const ProductPage = ({ productPageName, children }) => {
       <article className="px-10 text-center max-w-screen-xxl mx-auto">{children}</article>
 
       {/* NAVIGATES TO THE DIFFERENT AUDIO SYSTEM PAGES */}
-      <section className="mb-48 pt-20">
-        <CategoryList />
-      </section>
+
+      <CategoryList />
 
       {/* ***************** */}
     </Layout>
