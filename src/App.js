@@ -4,20 +4,23 @@ import Headphone from "./pages/Headphone";
 import Earphone from "./pages/Earphone";
 import Speaker from "./pages/Speaker";
 import ProductDetails from "./pages/ProductDetails";
+import AudiophilleState from "./context/AudiophilleState";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="headphone" element={<Headphone />} />
-        <Route path="earphone" element={<Earphone />} />
-        <Route path="speaker" element={<Speaker />} />
-        <Route path="product">
-          <Route path=":id" element={<ProductDetails />} />
-        </Route>
-      </Routes>
-    </Router>
+    <AudiophilleState>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="headphone" element={<Headphone />} />
+          <Route path="earphone" element={<Earphone />} />
+          <Route path="speaker" element={<Speaker />} />
+          <Route path="product">
+            <Route path=":slug" element={<ProductDetails />} />
+          </Route>
+        </Routes>
+      </Router>
+    </AudiophilleState>
   );
 }
 

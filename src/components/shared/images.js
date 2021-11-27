@@ -48,6 +48,121 @@ import zx7Speaker from "../../assets/product-zx7-speaker/desktop/image-category-
 import zx7SpeakerTablet from "../../assets/product-zx7-speaker/tablet/image-category-page-preview.jpg";
 import zx7SpeakerMobile from "../../assets/product-zx7-speaker/mobile/image-category-page-preview.jpg";
 
+/* PRODUCT DETAILS IMAGES */
+
+/* YX1 PRODUCT DETAILS IMAGES */
+import yx1DetailsPageImg from "../../assets/product-yx1-earphones/desktop/image-product.jpg";
+import yx1DetailsPageImgTab from "../../assets/product-yx1-earphones/tablet/image-product.jpg";
+import yx1DetailsPageImgMob from "../../assets/product-yx1-earphones/mobile/image-product.jpg";
+
+/* YX1 PRODUCT DETAILS GALLARY IMAGES */
+
+import yx1Gallary1Img from "../../assets/product-yx1-earphones/desktop/image-gallery1.jpg";
+import yx1Gallary1ImgTab from "../../assets/product-yx1-earphones/tablet/image-gallery1.jpg";
+import yx1Gallary1ImgMob from "../../assets/product-yx1-earphones/mobile/image-gallery1.jpg";
+
+import yx1Gallary2Img from "../../assets/product-yx1-earphones/desktop/image-gallery2.jpg";
+import yx1Gallary2ImgTab from "../../assets/product-yx1-earphones/tablet/image-gallery2.jpg";
+import yx1Gallary2ImgMob from "../../assets/product-yx1-earphones/mobile/image-gallery2.jpg";
+
+import yx1Gallary3Img from "../../assets/product-yx1-earphones/desktop/image-gallery3.jpg";
+import yx1Gallary3ImgTab from "../../assets/product-yx1-earphones/tablet/image-gallery3.jpg";
+import yx1Gallary3ImgMob from "../../assets/product-yx1-earphones/mobile/image-gallery3.jpg";
+
+/* ZX7 PRODUCT DETAILS IMAGES */
+import zx7DetailsPageImg from "../../assets/product-zx7-speaker/desktop/image-product.jpg";
+import zx7DetailsPageImgTab from "../../assets/product-zx7-speaker/tablet/image-product.jpg";
+import zx7DetailsPageImgMob from "../../assets/product-zx7-speaker/mobile/image-product.jpg";
+
+/* ZX7 PRODUCT DETAILS GALLERY IMAGES */
+
+import zx7Gallary1Img from "../../assets/product-zx7-speaker/desktop/image-gallery1.jpg";
+import zx7Gallary1ImgTab from "../../assets/product-zx7-speaker/tablet/image-gallery1.jpg";
+import zx7Gallary1ImgMob from "../../assets/product-zx7-speaker/mobile/image-gallery1.jpg";
+
+import zx7Gallary2Img from "../../assets/product-zx7-speaker/desktop/image-gallery2.jpg";
+import zx7Gallary2ImgTab from "../../assets/product-zx7-speaker/tablet/image-gallery2.jpg";
+import zx7Gallary2ImgMob from "../../assets/product-zx7-speaker/mobile/image-gallery2.jpg";
+
+import zx7Gallary3Img from "../../assets/product-zx7-speaker/desktop/image-gallery3.jpg";
+import zx7Gallary3ImgTab from "../../assets/product-zx7-speaker/tablet/image-gallery3.jpg";
+import zx7Gallary3ImgMob from "../../assets/product-zx7-speaker/mobile/image-gallery3.jpg";
+
+/* ZX9 PRODUCT DETAILS IMAGES */
+import zx9DetailsPageImg from "../../assets/product-zx9-speaker/desktop/image-product.jpg";
+import zx9DetailsPageImgTab from "../../assets/product-zx9-speaker/tablet/image-product.jpg";
+import zx9DetailsPageImgMob from "../../assets/product-zx9-speaker/mobile/image-product.jpg";
+
+/* ZX9 PRODUCT DETAILS GALLERY IMAGES */
+
+import zx9Gallary1Img from "../../assets/product-zx9-speaker/desktop/image-gallery1.jpg";
+import zx9Gallary1ImgTab from "../../assets/product-zx9-speaker/tablet/image-gallery1.jpg";
+import zx9Gallary1ImgMob from "../../assets/product-zx9-speaker/mobile/image-gallery1.jpg";
+
+import zx9Gallary2Img from "../../assets/product-zx9-speaker/desktop/image-gallery2.jpg";
+import zx9Gallary2ImgTab from "../../assets/product-zx9-speaker/tablet/image-gallery2.jpg";
+import zx9Gallary2ImgMob from "../../assets/product-zx9-speaker/mobile/image-gallery2.jpg";
+
+import zx9Gallary3Img from "../../assets/product-zx9-speaker/desktop/image-gallery3.jpg";
+import zx9Gallary3ImgTab from "../../assets/product-zx9-speaker/tablet/image-gallery3.jpg";
+import zx9Gallary3ImgMob from "../../assets/product-zx9-speaker/mobile/image-gallery3.jpg";
+
+/* X99 MARK ONE PRODUCT DETAILS IMAGES */
+import xx99Mark1DetailsPageImg from "../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
+import xx99Mark1DetailsPageImgTab from "../../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg";
+import xx99Mark1DetailsPageImgMob from "../../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg";
+
+/* XX99 MARK ONE PRODUCT DETAILS GALLERY IMAGES */
+import xx99Mark1Gallary1Img from "../../assets/product-xx99-mark-one-headphones/desktop/image-gallery1.jpg";
+import xx99Mark1Gallary1ImgTab from "../../assets/product-xx99-mark-one-headphones/tablet/image-gallery1.jpg";
+import xx99Mark1Gallary1ImgMob from "../../assets/product-xx99-mark-one-headphones/mobile/image-gallery1.jpg";
+
+import xx99Mark1Gallary2Img from "../../assets/product-xx99-mark-one-headphones/desktop/image-gallery2.jpg";
+import xx99Mark1Gallary2ImgTab from "../../assets/product-xx99-mark-one-headphones/tablet/image-gallery2.jpg";
+import xx99Mark1Gallary2ImgMob from "../../assets/product-xx99-mark-one-headphones/mobile/image-gallery2.jpg";
+
+import xx99Mark1Gallary3Img from "../../assets/product-xx99-mark-one-headphones/desktop/image-gallery3.jpg";
+import xx99Mark1Gallary3ImgTab from "../../assets/product-xx99-mark-one-headphones/tablet/image-gallery3.jpg";
+import xx99Mark1Gallary3ImgMob from "../../assets/product-xx99-mark-one-headphones/mobile/image-gallery3.jpg";
+
+/* XX99 MARK TWO PRODUCT DETAILS IMAGES */
+import xx99Mark2DetailsPageImg from "../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
+import xx99Mark2DetailsPageImgTab from "../../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg";
+import xx99Mark2DetailsPageImgMob from "../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg";
+
+/* XX99 MARK TWO PRODUCT DETAILS GALLERY IMAGES */
+
+import xx99Mark2Gallary1Img from "../../assets/product-xx99-mark-two-headphones/desktop/image-gallery1.jpg";
+import xx99Mark2Gallary1ImgTab from "../../assets/product-xx99-mark-two-headphones/tablet/image-gallery1.jpg";
+import xx99Mark2Gallary1ImgMob from "../../assets/product-xx99-mark-two-headphones/mobile/image-gallery1.jpg";
+
+import xx99Mark2Gallary2Img from "../../assets/product-xx99-mark-two-headphones/desktop/image-gallery2.jpg";
+import xx99Mark2Gallary2ImgTab from "../../assets/product-xx99-mark-two-headphones/tablet/image-gallery2.jpg";
+import xx99Mark2Gallary2ImgMob from "../../assets/product-xx99-mark-two-headphones/mobile/image-gallery2.jpg";
+
+import xx99Mark2Gallary3Img from "../../assets/product-xx99-mark-two-headphones/desktop/image-gallery3.jpg";
+import xx99Mark2Gallary3ImgTab from "../../assets/product-xx99-mark-two-headphones/tablet/image-gallery3.jpg";
+import xx99Mark2Gallary3ImgMob from "../../assets/product-xx99-mark-two-headphones/mobile/image-gallery3.jpg";
+
+/* XX59 PRODUCT DETAILS IMAGES */
+import xx59DetailsPageImg from "../../assets/product-xx59-headphones/desktop/image-product.jpg";
+import xx59DetailsPageImgTab from "../../assets/product-xx59-headphones/tablet/image-product.jpg";
+import xx59DetailsPageImgMob from "../../assets/product-xx59-headphones/mobile/image-product.jpg";
+
+/* XX59 PRODUCT DETAILS GALLERY IMAGES */
+
+import xx59Gallary1Img from "../../assets/product-xx59-headphones/desktop/image-gallery1.jpg";
+import xx59Gallary1ImgTab from "../../assets/product-xx59-headphonestablet/image-gallery1.jpg";
+import xx59Gallary1ImgMob from "../../assets/product-xx59-headphones/mobile/image-gallery1.jpg";
+
+import xx59Gallary2Img from "../../assets/product-xx59-headphones/desktop/image-gallery2.jpg";
+import xx59Gallary2ImgTab from "../../assets/product-xx59-headphones/tablet/image-gallery2.jpg";
+import xx59Gallary2ImgMob from "../../assets/product-xx59-headphones/mobile/image-gallery2.jpg";
+
+import xx59Gallary3Img from "../../assets/product-xx59-headphones/desktop/image-gallery3.jpg";
+import xx59Gallary3ImgTab from "../../assets/product-xx59-headphones/tablet/image-gallery3.jpg";
+import xx59Gallary3ImgMob from "../../assets/product-xx59-headphones/mobile/image-gallery3.jpg";
+
 const IMG = {
   shared: {
     earphoneThumbnail: EarphonesThumbnail,
@@ -98,6 +213,114 @@ const IMG = {
     zx7: zx7Speaker,
     zx7Tablet: zx7SpeakerTablet,
     zx7Mobile: zx7SpeakerMobile,
+  },
+
+  productDetails: {
+    /* YX1 PRODUCT DETAILS PAGE IMAGES */
+    yx1DetailsImg: yx1DetailsPageImg,
+    yx1DetailsImgTab: yx1DetailsPageImgTab,
+    yx1DetailsImgMob: yx1DetailsPageImgMob,
+
+    /* YX1 PRODUCT DETAILS PAGE GALLARY IMG */
+    yx1GallaryOneImg: yx1Gallary1Img,
+    yx1GallaryOneImgTab: yx1Gallary1ImgTab,
+    yx1GallaryOneImgMob: yx1Gallary1ImgMob,
+    yx1GallaryTwoImg: yx1Gallary2Img,
+    yx1GallaryTwoImgTab: yx1Gallary2ImgTab,
+    yx1GallaryTwoImgMob: yx1Gallary2ImgMob,
+    yx1GallaryThreeImg: yx1Gallary3Img,
+    yx1GallaryThreeImgTab: yx1Gallary3ImgTab,
+    yx1GallaryThreeImgMob: yx1Gallary3ImgMob,
+
+    /* ZX7 PRODUCT DETAILS PAGE IMAGES */
+
+    zx7DetailsImg: zx7DetailsPageImg,
+    zx7DetailsImgTab: zx7DetailsPageImgTab,
+    zx7DetailsImgMob: zx7DetailsPageImgMob,
+
+    /* ZX7 PRODUCT DETAILS GALLERY IMAGES */
+
+    zx7GallaryOneImg: zx7Gallary1Img,
+    zx7GallaryOneImgTab: zx7Gallary1ImgTab,
+    zx7GallaryOneImgMob: zx7Gallary1ImgMob,
+    zx7GallaryTwoImg: zx7Gallary2Img,
+    zx7GallaryTwoImgTab: zx7Gallary2ImgTab,
+    zx7GallaryTwoImgMob: zx7Gallary2ImgMob,
+    zx7GallaryThreeImg: zx7Gallary3Img,
+    zx7GallaryThreeImgTab: zx7Gallary3ImgTab,
+    zx7GallaryThreeImgMob: zx7Gallary3ImgMob,
+
+    /* ZX9 PRODUCT DETAILS PAGE IMAGES */
+
+    zx9DetailsImg: zx9DetailsPageImg,
+    zx9DetailsImgTab: zx9DetailsPageImgTab,
+    zx9DetailsImgMob: zx9DetailsPageImgMob,
+
+    /* ZX9 PRODUCT DETAILS PAGE GALLERY IMAGES */
+
+    zx9GallaryOneImg: zx9Gallary1Img,
+    zx9GallaryOneImgTab: zx9Gallary1ImgTab,
+    zx9GallaryOneImgMob: zx9Gallary1ImgMob,
+    zx9GallaryTwoImg: zx9Gallary2Img,
+    zx9GallaryTwoImgTab: zx9Gallary2ImgTab,
+    zx9GallaryTwoImgMob: zx9Gallary2ImgMob,
+    zx9GallaryThreeImg: zx9Gallary3Img,
+    zx9GallaryThreeImgTab: zx9Gallary3ImgTab,
+    zx9GallaryThreeImgMob: zx9Gallary3ImgMob,
+
+    /* XX9 MARK ONE PRODUCT DETAILS PAGE IMAGES */
+
+    XX99MarkOneDetailsImg: xx99Mark1DetailsPageImg,
+    XX99MarkOneDetailsImgTab: xx99Mark1DetailsPageImgTab,
+    XX99MarkOneDetailsImgMob: xx99Mark1DetailsPageImgMob,
+
+    /* XX99 MARK ONE PRODUCT DETAILS PAGE GALLERY IMAGES */
+
+    XX99MarkOneGallaryOneImg: xx99Mark1Gallary1Img,
+    XX99MarkOneGallaryOneImgTab: xx99Mark1Gallary1ImgTab,
+    XX99MarkOneGallaryOneImgMob: xx99Mark1Gallary1ImgMob,
+    XX99MarkOneGallaryTwoImg: xx99Mark1Gallary2Img,
+    XX99MarkOneGallaryTwoImgTab: xx99Mark1Gallary2ImgTab,
+    XX99MarkOneGallaryTwoImgMob: xx99Mark1Gallary2ImgMob,
+    XX99MarkOneGallaryThreeImg: xx99Mark1Gallary3Img,
+    XX99MarkOneGallaryThreeImgTab: xx99Mark1Gallary3ImgTab,
+    XX99MarkOneGallaryThreeImgMob: xx99Mark1Gallary3ImgMob,
+
+    /* XX99 MARK TWO PRODUCT DETAILS PAGE  */
+
+    XX99MarkTwoDetailsImg: xx99Mark2DetailsPageImg,
+    XX99MarkTwoDetailsImgTab: xx99Mark2DetailsPageImgTab,
+    XX99MarkTwoDetailsImgMob: xx99Mark2DetailsPageImgMob,
+
+    /* XX99 MARK TWO PRODUCT DETAILS PAGE GALLERY IMAGES */
+
+    XX99MarkTwoGallaryOneImg: xx99Mark2Gallary1Img,
+    XX99MarkTwoGallaryOneImgTab: xx99Mark2Gallary1ImgTab,
+    XX99MarkTwoGallaryOneImgMob: xx99Mark2Gallary1ImgMob,
+    XX99MarkTwoGallaryTwoImg: xx99Mark2Gallary2Img,
+    XX99MarkTwoGallaryTwoImgTab: xx99Mark2Gallary2ImgTab,
+    XX99MarkTwoGallaryTwoImgMob: xx99Mark2Gallary2ImgMob,
+    XX99MarkTwoGallaryThreeImg: xx99Mark2Gallary3Img,
+    XX99MarkTwoGallaryThreeImgTab: xx99Mark2Gallary3ImgTab,
+    XX99MarkTwoGallaryThreeImgMob: xx99Mark2Gallary3ImgMob,
+
+    /* XX59 PRODUCT DETAILS PAGE  */
+
+    XX59DetailsImg: xx59DetailsPageImg,
+    XX59DetailsImgTab: xx59DetailsPageImgTab,
+    XX59DetailsImgMob: xx59DetailsPageImgMob,
+
+    /* XX59 PRODUCT DETAILS PAGE GALLERY IMAGES */
+
+    XX59GallaryOneImg: xx59Gallary1Img,
+    XX59GallaryOneImgTab: xx59Gallary1ImgTab,
+    XX59GallaryOneImgMob: xx59Gallary1ImgMob,
+    XX59GallaryTwoImg: xx59Gallary2Img,
+    XX59GallaryTwoImgTab: xx59Gallary2ImgTab,
+    XX59GallaryTwoImgMob: xx59Gallary2ImgMob,
+    XX59GallaryThreeImg: xx59Gallary3Img,
+    XX59GallaryThreeImgTab: xx59Gallary3ImgTab,
+    XX59GallaryThreeImgMob: xx59Gallary3ImgMob,
   },
 };
 

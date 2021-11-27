@@ -18,10 +18,12 @@ module.exports = {
         100: "#F1F1F1",
         200: "#FAFAFA",
         300: "#FFFFFF",
+        400: "#B9B9B9",
       },
     },
     extend: {
       screens: {
+        sm: "375px",
         xxl: "1100px",
       },
 
@@ -65,6 +67,7 @@ module.exports = {
 
       fontSize: {
         "3xxl": ["2.4rem", "3.6rem"],
+        "3xx": ["2.4rem", "3.278rem"],
         "4xxl": ["2.8rem", "3.825rem"],
         "5xxl": ["3.6rem", "4rem"],
         "6xxl": ["4rem", "4.4rem"],

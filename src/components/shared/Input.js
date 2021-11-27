@@ -6,7 +6,7 @@ const Input = ({ value, classList }) => {
       type="button"
       value={value}
       className={`
-        py-6 px-14 font-bold text-xl tracking-widest leading-7
+        py-6 px-14 font-bold text-xl tracking-widest leading-7 inline-block
         ${classList}
         `}
     />
