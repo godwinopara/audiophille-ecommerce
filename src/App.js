@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="headphone" element={<Headphone />} />
-          <Route path="earphone" element={<Earphone />} />
-          <Route path="speaker" element={<Speaker />} />
+          <Route path="headphones" element={<Headphone />} />
+          <Route path="earphones" element={<Earphone />} />
+          <Route path="speakers" element={<Speaker />} />
           <Route path="product">
             <Route path=":slug" element={<ProductDetails />} />
           </Route>

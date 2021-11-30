@@ -13,13 +13,14 @@ import Span from "../components/shared/Span";
 import Button from "../components/shared/Button";
 import Input from "../components/shared/Input";
 import Table from "../components/shared/Table";
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
-  // const { id } = useParams();
+  const { slug } = useParams();
   const { getProduct, product, isLoading } = useContext(AudioPhilleContext);
 
   useEffect(() => {
-    getProduct("yx1-earphones");
+    getProduct(slug);
     //eslint-disable-next-line
   }, []);
 
@@ -30,7 +31,11 @@ const ProductDetails = () => {
       <Layout>
         <section className="px-10 xl:px-0 xl:max-w-screen-xxl xl:mx-auto">
           {/* ************************** */}
-          <div className="py-8 bg-opacity-50">Go Back</div>
+          <div className="my-20 bg-opacity-50">
+            <Link className="opacity-50" to={`/${product.category}`}>
+              Go Back
+            </Link>
+          </div>
           {/* ******************************** */}
 
           {/* ************************************** */}
@@ -43,11 +48,11 @@ const ProductDetails = () => {
                 classList="rounded xl"
               />
             </div>
-            <div className="flex-1 md:ml-28">
+            <div className="flex-1 md:ml-28 xl:ml-48">
               <NewProduct />
               <Heading2 productName={product.name} productCategory="" />
               <Description description={product.description} />
-              <span className="inline-block font-bold text-3xl mb-12">{`$${product.price}`}</span>
+              <span className="inline-block font-bold text-3xl mb-12 tracking-widest uppercase">{`$${product.price}`}</span>
               <div className=" sm:flex items-center">
                 <div className="mb-8 flex items-center sm:mb-0 sm:mr-4">
                   <Span text="-" classList="text-white-400 " />
@@ -64,41 +69,50 @@ const ProductDetails = () => {
           {/* ********************************************** */}
 
           {/* ************* FEATURES *********************** */}
-          <section className="mt-32">
-            <Heading3 text="FEATURES" />
-            <Description description={product.features} />
-            <Description description={product.features1} />
+          <section className="my-32 xl:flex justify-between ">
+            <section className=" xl:flex-1 xl:mr-48">
+              <Heading3 text="FEATURES" />
+              <Description description={product.features} />
+              <Description description={product.features1} />
+            </section>
+
+            <section className="md:mt-32 md:flex xl:flex-1 xl:block xl:mt-0 justify-center">
+              <Heading3 text="IN THE BOX" classList="md:flex-1 md:mt-0 xl:mt-12" />
+              <Table items={product.includes} />
+            </section>
           </section>
 
-          <section className="my-32">
-            <Heading3 text="IN THE BOX" />
-            <Table items={product.includes} />
+          <section className="flex flex-col gap-y-8 mb-48 md:flex-row">
+            <div className="flex flex-col justify-between md:mr-8">
+              <Picture
+                desktopImg={product.gallery.first.desktop}
+                tabletImg={product.gallery.first.tablet}
+                mobileImg={product.gallery.first.mobile}
+                classList="rounded-xl mb-8"
+              />
+
+              <Picture
+                desktopImg={product.gallery.second.desktop}
+                tabletImg={product.gallery.second.tablet}
+                mobileImg={product.gallery.second.mobile}
+                classList="rounded-xl"
+              />
+            </div>
+            <div className="h-full">
+              <Picture
+                desktopImg={product.gallery.third.desktop}
+                tabletImg={product.gallery.third.tablet}
+                mobileImg={product.gallery.third.mobile}
+                classList="rounded-xl"
+              />
+            </div>
           </section>
 
-          <section className="grid gap-y-8 mb-48">
-            <Picture
-              desktopImg={product.gallery.first.desktop}
-              tabletImg={product.gallery.first.tablet}
-              mobileImg={product.gallery.first.mobile}
-              classList="rounded-xl"
-            />
-            <Picture
-              desktopImg={product.gallery.second.desktop}
-              tabletImg={product.gallery.second.tablet}
-              mobileImg={product.gallery.second.mobile}
-              classList="rounded-xl"
-            />
-            <Picture
-              desktopImg={product.gallery.third.desktop}
-              tabletImg={product.gallery.third.tablet}
-              mobileImg={product.gallery.third.mobile}
-              classList="rounded-xl"
-            />
-          </section>
+          {/*LIST OTHER AVAILABLE PRODUCTS IN THE STORE */}
 
-          <section className="text-center mb-28 md:flex">
-            <h3 className="font-bold leading-36 text-3xxl mb-16">YOU MAY ALSO LIKE</h3>
-            <div>
+          <section className="text-center mb-28 border lg:mb-64">
+            <Heading3 text="you may also like" classList="mb-24" />
+            <div className="md:grid md:grid-cols-3 md:gap-x-5 lg:gap-x-12">
               {product.others.map((otherProducts, id) => {
                 return (
                   <div key={id} className="mb-20">
@@ -106,15 +120,21 @@ const ProductDetails = () => {
                       desktopImg={otherProducts.image.desktop}
                       tabletImg={otherProducts.image.tablet}
                       mobileImg={otherProducts.image.mobile}
+                      classList="rounded-xl"
                     />
-                    <Heading3 text={product.others[0].name} />
-                    <Button classList="bg-brown-100 text-white-100 hover:bg-brown-200" />
+                    <Heading3 text={otherProducts.name} />
+                    <Button
+                      classList="bg-brown-100 text-white-100 hover:bg-brown-200"
+                      path={otherProducts.slug}
+                    />
                   </div>
                 );
               })}
             </div>
           </section>
         </section>
+
+        {/* AUDIO CATEGORIES LIST */}
         <CategoryList />
       </Layout>
     );

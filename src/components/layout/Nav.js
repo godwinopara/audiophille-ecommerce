@@ -5,7 +5,7 @@ import Hamburger from "../../assets/shared/tablet/icon-hamburger.svg";
 import List from "./List";
 
 const Nav = () => {
-  const Links = ["home", "headphone", "speaker", "earphone"];
+  const Links = ["home", "headphones", "speakers", "earphones"];
 
   return (
     <Fragment>

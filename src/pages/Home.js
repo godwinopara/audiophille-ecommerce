@@ -38,7 +38,10 @@ const Home = () => {
               passionate music enthusiast.
             "
             />
-            <Button classList="bg-brown-100 text-white-100 hover:bg-brown-200 " />
+            <Button
+              classList="bg-brown-100 text-white-100 hover:bg-brown-200 "
+              path="xx99-mark-one-headphones"
+            />
             {/* Hero Content End */}
           </div>
           {/* Inner Wrapper End */}
@@ -88,7 +91,7 @@ const Home = () => {
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable
               sound.
             </p>
-            <Button classList="bg-black-100 text-white-100 hover:opacity-80" />
+            <Button classList="bg-black-100 text-white-100 hover:opacity-80" path="zx9-speaker" />
           </div>
         </div>
       </section>
@@ -106,7 +109,10 @@ const Home = () => {
        "
       >
         <h2 className="uppercase font-bold text-4xxl tracking-widest mb-12">ZX7 speaker </h2>
-        <Button classList="border border-black-200 hover:bg-black-200 hover:text-white-300" />
+        <Button
+          classList="border border-black-200 hover:bg-black-200 hover:text-white-300"
+          path="zx7-speaker"
+        />
       </section>
       {/* ZX7 SPEAKER END */}
       {/****************************************************************************/}
@@ -137,7 +143,10 @@ const Home = () => {
         >
           <div>
             <h2 className="uppercase mb-12 text-4xxl tracking-widest font-bold">YX1 earphones</h2>
-            <Button classList="border border-black-200 hover:bg-black-200 hover:text-white-300" />
+            <Button
+              classList="border border-black-200 hover:bg-black-200 hover:text-white-300"
+              path="yx1-earphones"
+            />
           </div>
         </div>
       </section>

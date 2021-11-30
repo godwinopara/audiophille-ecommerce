@@ -3,7 +3,7 @@ import IMG from "../shared/images";
 import List from "./List";
 
 const Footer = () => {
-  const Links = ["home", "headphone", "speaker", "earphone"];
+  const Links = ["homes", "headphones", "speakers", "earphones"];
 
   return (
     <footer

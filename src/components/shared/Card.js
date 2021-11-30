@@ -1,6 +1,6 @@
 import ShopLink from "./ShopLink";
 
-const Card = ({ img, categoryName }) => {
+const Card = ({ img, categoryName, path }) => {
   return (
     <li className="bg-white-100 rounded-xl p-10 relative h-64  flex flex-col justify-center items-center">
       <img
@@ -10,7 +10,7 @@ const Card = ({ img, categoryName }) => {
       "
       />
       <p className="font-bold text-2xl tracking-widest mb-7 mt-14">{categoryName}</p>
-      <ShopLink />
+      <ShopLink path={path} />
     </li>
   );
 };

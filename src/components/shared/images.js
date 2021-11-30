@@ -61,8 +61,8 @@ import yx1EarphoneMobile from "../../assets/product-yx1-earphones/mobile/image-c
 
 /* SPEAKER PAGE EARPHONES */
 
-import zx9Speaker from "../../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg";
-import zx9SpeakerTablet from "../../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
+import zx9Speaker from "../../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
+import zx9SpeakerTablet from "../../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg";
 import zx9SpeakerMobile from "../../assets/product-zx9-speaker/mobile/image-category-page-preview.jpg";
 import zx7Speaker from "../../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 import zx7SpeakerTablet from "../../assets/product-zx7-speaker/tablet/image-category-page-preview.jpg";
