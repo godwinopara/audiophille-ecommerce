@@ -1,10 +1,23 @@
-import React, { Fragment } from "react";
+import { useState, useEffect, Fragment } from "react";
 import Logo from "../../assets/shared/desktop/logo.svg";
 import IconCart from "../../assets/shared/desktop/icon-cart.svg";
 import Hamburger from "../../assets/shared/tablet/icon-hamburger.svg";
 import List from "./List";
+import CategoryList from "../shared/CategoryList";
 
 const Nav = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    navOpen
+      ? (document.documentElement.style.overflow = "hidden")
+      : (document.documentElement.style.overflowY = "scroll");
+  }, [navOpen]);
+
+  const handleOnClick = () => {
+    setNavOpen(!navOpen);
+  };
+
   const Links = ["home", "headphones", "speakers", "earphones"];
 
   return (
@@ -22,7 +35,10 @@ const Nav = () => {
       >
         {/* HAMBURGER MENU*/}
 
-        <div className="cursor-pointer flex items-center md:mr-20 lg:hidden">
+        <div
+          onClick={handleOnClick}
+          className="cursor-pointer flex items-center md:mr-20 lg:hidden"
+        >
           <img src={Hamburger} alt="" />
         </div>
 
@@ -46,20 +62,18 @@ const Nav = () => {
           })}
         </ul>
 
-        {/* NAV FOR TABLET AND MOBILE */}
-        <ul className="hidden">
-          <List text="Home" />
-          <List text="Headphones" />
-          <List text="Speakers" />
-          <List text="Earphones" />
-        </ul>
-
         {/* CART IMAGE */}
 
         <div className="cursor-pointer md:ml-auto ">
           <img src={IconCart} alt="" />
         </div>
       </nav>
+
+      {navOpen && (
+        <nav className="z-10 bg-white-300 fixed overflow-y-scroll w-screen h-screen left-0 top-40 md:max-h-100 md:overflow-hidden xl:hidden">
+          <CategoryList classList="my-32 " />
+        </nav>
+      )}
     </Fragment>
   );
 };
