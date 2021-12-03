@@ -1,4 +1,5 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useContext } from "react";
+import CartContext from "../../context/cart/cartContext";
 import Logo from "../../assets/shared/desktop/logo.svg";
 import IconCart from "../../assets/shared/desktop/icon-cart.svg";
 import Hamburger from "../../assets/shared/tablet/icon-hamburger.svg";
@@ -7,6 +8,11 @@ import CategoryList from "../shared/CategoryList";
 
 const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const { toggleDisplayCart, cart } = useContext(CartContext);
+
+  const handleClick = (params) => {
+    toggleDisplayCart();
+  };
 
   useEffect(() => {
     navOpen
@@ -64,7 +70,12 @@ const Nav = () => {
 
         {/* CART IMAGE */}
 
-        <div className="cursor-pointer md:ml-auto ">
+        <div onClick={handleClick} className="cursor-pointer md:ml-auto relative">
+          {cart.length > 0 && (
+            <div className="absolute -right-3 -top-4 px-2 text-lg rounded-xl text-white-100 bg-brown-100">
+              {cart.length}
+            </div>
+          )}
           <img src={IconCart} alt="" />
         </div>
       </nav>

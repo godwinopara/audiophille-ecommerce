@@ -1,4 +1,4 @@
-import { CART_IS_OPEN, ADD_TO_CART, GET_CART_TOTAL } from "../types";
+import { CART_IS_OPEN, ADD_TO_CART, GET_CART_TOTAL, RESET_CART } from "../types";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,6 +16,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         total: action.payload,
+      };
+    case RESET_CART:
+      return {
+        ...state,
+        cart: [],
+        total: "0.00",
       };
     default:
       return state;

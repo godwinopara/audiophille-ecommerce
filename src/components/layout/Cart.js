@@ -6,7 +6,13 @@ import Input from "../shared/Input";
 import Heading3 from "../shared/Heading3";
 
 const Cart = () => {
-  const { cart, total } = useContext(CartContext);
+  let { cart, total, resetCart } = useContext(CartContext);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    resetCart();
+  };
+
   return (
     <Fragment>
       <div className="absolute h-screen opacity-50 bg-white-500 w-full top-full left-0"></div>
@@ -17,9 +23,12 @@ const Cart = () => {
         <div className="bg-white-300 z-20 py-12 px-10 rounded-xl absolute w-full md:w-1/2 md:right-0 xl:right-0 xl:w-1/3">
           <div className="flex justify-between items-center mb-12">
             <h2 className="font-bold uppercase text-3xl">Cart ({cart.length})</h2>
+
+            {/* CLEAR THE ITEM ON THE CART */}
             <Input
               classList="bg-white-300 opacity-50 underline text-2xl cursor-pointer hover:text-brown-100 sm:px-0"
               value="Remove All"
+              onClick={handleClick}
             />
           </div>
           {cart.length === 0 && (

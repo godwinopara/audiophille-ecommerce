@@ -1,6 +1,6 @@
 import { useReducer, useEffect } from "react";
 import CartContext from "./cartContext";
-import { CART_IS_OPEN, ADD_TO_CART, GET_CART_TOTAL } from "../types";
+import { CART_IS_OPEN, ADD_TO_CART, GET_CART_TOTAL, RESET_CART } from "../types";
 
 import reducer from "./cartReducer";
 
@@ -32,6 +32,18 @@ const CartState = ({ children }) => {
     }
   };
 
+  const toggleDisplayCart = (params) => {
+    dispatch({
+      type: CART_IS_OPEN,
+    });
+  };
+
+  const resetCart = () => {
+    dispatch({
+      type: RESET_CART,
+    });
+  };
+
   const cartTotal = () => {
     if (state.cart.length > 0) {
       let total = state.cart.reduce((sum, item) => sum + Number(item.amount), 0);
@@ -49,6 +61,8 @@ const CartState = ({ children }) => {
         cartIsOpen: state.cartIsOpen,
         total: state.total,
         addToCart,
+        resetCart,
+        toggleDisplayCart,
       }}
     >
       {children}
