@@ -15,11 +15,11 @@ const CartList = ({ productCartImg, productName, productAmount }) => {
         </div>
       </div>
       <div className="flex items-center  bg-white-300">
-        <span className="px-4 py-2 bg-white-100  inline-block text-white-400 hover:text-brown-100">
+        <span className="px-4 py-2 bg-white-100  inline-block cursor-pointer text-white-400 hover:text-brown-100">
           -
         </span>
         <span className="px-4 py-2 font-bold bg-white-100  inline-block">0</span>
-        <span className="px-4 py-2 bg-white-100 text-white-400 hover:text-brown-100  inline-block">
+        <span className="px-4 py-2 bg-white-100 text-white-400 cursor-pointer hover:text-brown-100  inline-block">
           +
         </span>
       </div>

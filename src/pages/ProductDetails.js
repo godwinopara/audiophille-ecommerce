@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router";
 import AudioPhilleContext from "../context/audioPhileContext";
+import CartContext from "../context/cart/cartContext";
 
 import Layout from "../components/layout/Layout";
 import CategoryList from "../components/shared/CategoryList";
@@ -18,11 +19,21 @@ import { Link } from "react-router-dom";
 const ProductDetails = () => {
   const { slug } = useParams();
   const { getProduct, product, isLoading } = useContext(AudioPhilleContext);
+  const { addToCart, cart } = useContext(CartContext);
 
   useEffect(() => {
     getProduct(slug);
     //eslint-disable-next-line
-  }, []);
+  }, [cart]);
+
+  /* ADD THE ITEM TO THE CART */
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    addToCart({ name: product.cartName, image: product.cartImage, amount: `${product.price}` });
+  };
+
+  /* ******************* */
 
   if (isLoading) {
     return "loading.....";
@@ -37,6 +48,8 @@ const ProductDetails = () => {
             </Link>
           </div>
           {/* ******************************** */}
+
+          {/* OVERLAY */}
 
           {/* ************************************** */}
           <section className="md:flex md:justify-between md: items-center">
@@ -61,7 +74,8 @@ const ProductDetails = () => {
                 </div>
                 <Input
                   value="ADD TO CART"
-                  classList="bg-brown-100 hover:bg-brown-200 text-white-300"
+                  classList="bg-brown-100 hover:bg-brown-200 text-white-300 font-bold"
+                  onClick={handleClick}
                 />
               </div>
             </div>
@@ -110,7 +124,7 @@ const ProductDetails = () => {
 
           {/*LIST OTHER AVAILABLE PRODUCTS IN THE STORE */}
 
-          <section className="text-center mb-28 border lg:mb-64">
+          <section className="text-center mb-28 lg:mb-64">
             <Heading3 text="you may also like" classList="mb-24" />
             <div className="md:grid md:grid-cols-3 md:gap-x-5 lg:gap-x-12">
               {product.others.map((otherProducts, id) => {

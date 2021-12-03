@@ -1,3 +1,5 @@
+import cartImages from "../image/cartImage";
+
 /* All Images That are Used In all Pages */
 /* SHARED IMAGES */
 import EarphonesThumbnail from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
@@ -30,6 +32,7 @@ import z9HeadphoneTab from "../../assets/shared/tablet/image-zx9-speaker.jpg";
 import z9HeadphoneMob from "../../assets/shared/mobile/image-zx9-speaker.jpg";
 
 /* HOME PAGE IMAGES */
+
 import speakerImgDesktop from "../../assets/home/desktop/image-speaker-zx9.png";
 import speakerImgTablet from "../../assets/home/tablet/image-speaker-zx9.png";
 import speakerImgMobile from "../../assets/home/mobile/image-speaker-zx9.png";
@@ -361,6 +364,7 @@ const IMG = {
     XX59GallaryThreeImgTab: xx59Gallary3ImgTab,
     XX59GallaryThreeImgMob: xx59Gallary3ImgMob,
   },
+  cartImages: { ...cartImages },
 };
 
 export default IMG;

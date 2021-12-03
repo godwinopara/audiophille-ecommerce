@@ -19,6 +19,7 @@ module.exports = {
         200: "#FAFAFA",
         300: "#FFFFFF",
         400: "#B9B9B9",
+        500: "#969696",
       },
     },
     extend: {
@@ -66,6 +67,7 @@ module.exports = {
       },
 
       fontSize: {
+        "2xxl": ["1.8rem", "2.5rem"],
         "3xxl": ["2.4rem", "3.6rem"],
         "3xx": ["2.4rem", "3.278rem"],
         "4xxl": ["2.8rem", "3.825rem"],

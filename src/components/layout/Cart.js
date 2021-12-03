@@ -1,22 +1,51 @@
-import React from "react";
+import { useContext, Fragment } from "react";
+import CartContext from "../../context/cart/cartContext";
 import CartImg from "../../assets/cart/image-xx59-headphones.jpg";
 import CartList from "../cart/CartList";
+import Input from "../shared/Input";
+import Heading3 from "../shared/Heading3";
+
 const Cart = () => {
+  const { cart, total } = useContext(CartContext);
   return (
-    <div className="relative max-w-screen-xxl mx-auto">
-      <div className="bg-white-300 py-12 px-10 rounded-xl absolute w-full md:w-1/2 md:right-0 xl:right-0">
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="font-bold uppercase text-3xl">Cart (3)</h2>
-          <input
-            type="button"
-            value="Remove All"
-            className="bg-white-300 opacity-50 underline hover:text-brown-100"
-          />
+    <Fragment>
+      <div className="absolute h-screen opacity-50 bg-white-500 w-full top-full left-0"></div>
+      <div
+        className="relative max-w-screen-xxl mx-auto bg-black-500 top-7
+    "
+      >
+        <div className="bg-white-300 z-20 py-12 px-10 rounded-xl absolute w-full md:w-1/2 md:right-0 xl:right-0 xl:w-1/3">
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="font-bold uppercase text-3xl">Cart ({cart.length})</h2>
+            <Input
+              classList="bg-white-300 opacity-50 underline text-2xl cursor-pointer hover:text-brown-100 sm:px-0"
+              value="Remove All"
+            />
+          </div>
+          {cart.length === 0 && (
+            <Heading3 text="Your cart is empty" classList="text-center py-12" />
+          )}
+
+          {cart.length > 0 &&
+            cart.map((item, id) => {
+              return (
+                <CartList
+                  key={id}
+                  productCartImg={CartImg}
+                  productAmount={item.amount}
+                  productName={item.name}
+                />
+              );
+            })}
+
+          <ul className="flex justify-between items-center my-10">
+            <li className="opacity-50">TOTAL</li>
+            <li className="font-bold text-2xxl">$ {total}</li>
+          </ul>
+          <Input classList="bg-brown-100 w-full text-white-300 cursor-pointer" value="CHECKOUT" />
         </div>
-        <CartList productCartImg={CartImg} productAmount="500" productName="XX99 MARK II" />
-        <CartList productCartImg={CartImg} productAmount="2999" productName="XX99 MARK I" />
       </div>
-    </div>
+    </Fragment>
   );
 };
 

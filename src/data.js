@@ -1,10 +1,11 @@
 import IMG from "./components/shared/images";
-
 const Data = [
   {
     id: 1,
     slug: "yx1-earphones",
     name: "YX1 Wireless Earphones",
+    cartName: "YX1 WIRELESS",
+    cartImage: IMG.cartImages.yx1,
     image: {
       desktop: IMG.productDetails.yx1DetailsImg,
       tablet: IMG.productDetails.yx1DetailsImgTab,
@@ -97,6 +98,8 @@ const Data = [
     id: 2,
     slug: "xx59-headphones",
     name: "XX59 Headphones",
+    cartName: "XX59",
+    cartImage: IMG.cartImages.xx59,
     image: {
       desktop: IMG.productDetails.XX59DetailsImg,
       tablet: IMG.productDetails.XX59DetailsImgTab,
@@ -185,6 +188,8 @@ const Data = [
     id: 3,
     slug: "xx99-mark-one-headphones",
     name: "XX99 Mark I Headphones",
+    cartName: "XX99 MARK I",
+    cartImage: IMG.cartImages.xx99MarkI,
     image: {
       desktop: IMG.productDetails.XX99MarkOneDetailsImg,
       tablet: IMG.productDetails.XX99MarkOneDetailsImgTab,
@@ -273,6 +278,8 @@ const Data = [
     id: 4,
     slug: "xx99-mark-two-headphones",
     name: "XX99 Mark II Headphones",
+    cartName: "XX99 MARK II",
+    cartImage: IMG.cartImages.xx99MarkII,
     image: {
       desktop: IMG.productDetails.XX99MarkTwoDetailsImg,
       tablet: IMG.productDetails.XX99MarkTwoDetailsImgTab,
@@ -365,6 +372,8 @@ const Data = [
     id: 5,
     slug: "zx7-speaker",
     name: "ZX7 Speaker",
+    cartName: "ZX7",
+    cartImage: IMG.cartImages.zx7,
     image: {
       desktop: IMG.productDetails.zx7DetailsImg,
       tablet: IMG.productDetails.zx7DetailsImgTab,
@@ -457,6 +466,8 @@ const Data = [
     id: 6,
     slug: "zx9-speaker",
     name: "ZX9 Speaker",
+    cartName: "ZX9",
+    cartImage: IMG.cartImages.zx9,
     image: {
       mobile: IMG.productDetails.zx9DetailsImgMob,
       tablet: IMG.productDetails.zx9DetailsImgTab,
