@@ -1,6 +1,5 @@
 import { useContext, Fragment } from "react";
 import CartContext from "../../context/cart/cartContext";
-import CartImg from "../../assets/cart/image-xx59-headphones.jpg";
 import CartList from "../cart/CartList";
 import Input from "../shared/Input";
 import Heading3 from "../shared/Heading3";
@@ -15,12 +14,12 @@ const Cart = () => {
 
   return (
     <Fragment>
-      <div className="absolute h-screen opacity-50 bg-white-500 w-full top-full left-0"></div>
+      <div className="absolute min-h-screen opacity-50 bg-white-500 w-full top-full left-0"></div>
       <div
         className="relative max-w-screen-xxl mx-auto bg-black-500 top-7
     "
       >
-        <div className="bg-white-300 z-20 py-12 px-10 rounded-xl absolute w-full md:w-1/2 md:right-0 xl:right-0 xl:w-1/3">
+        <div className="bg-white-300 z-20 py-12 shadow-md px-10 rounded-xl absolute w-full md:w-1/2 md:right-0 xl:right-0 xl:w-1/3">
           <div className="flex justify-between items-center mb-12">
             <h2 className="font-bold uppercase text-3xl">Cart ({cart.length})</h2>
 
@@ -28,6 +27,7 @@ const Cart = () => {
             <Input
               classList="bg-white-300 opacity-50 underline text-2xl cursor-pointer hover:text-brown-100 sm:px-0"
               value="Remove All"
+              name="clear-cart"
               onClick={handleClick}
             />
           </div>
@@ -40,9 +40,10 @@ const Cart = () => {
               return (
                 <CartList
                   key={id}
-                  productCartImg={CartImg}
+                  productCartImg={item.image}
                   productAmount={item.amount}
                   productName={item.name}
+                  quantity={item.quantity}
                 />
               );
             })}

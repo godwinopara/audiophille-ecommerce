@@ -1,4 +1,11 @@
-import { CART_IS_OPEN, ADD_TO_CART, GET_CART_TOTAL, RESET_CART } from "../types";
+import {
+  CART_IS_OPEN,
+  ADD_TO_CART,
+  GET_CART_TOTAL,
+  RESET_CART,
+  INCREASE_QUANTITY,
+  DECREASE_QUANTITY,
+} from "../types";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,12 +23,24 @@ const reducer = (state, action) => {
       return {
         ...state,
         total: action.payload,
+        quantityChanged: false,
       };
     case RESET_CART:
       return {
         ...state,
         cart: [],
         total: "0.00",
+      };
+
+    case INCREASE_QUANTITY:
+      return {
+        ...state,
+        cart: action.payload,
+      };
+    case DECREASE_QUANTITY:
+      return {
+        ...state,
+        cart: action.payload,
       };
     default:
       return state;

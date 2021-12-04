@@ -1,10 +1,10 @@
-import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Headphone from "./pages/Headphone";
 import Earphone from "./pages/Earphone";
 import Speaker from "./pages/Speaker";
 import ProductDetails from "./pages/ProductDetails";
-import AudiophilleState from "./context/AudiophilleState";
+import AudiophilleState from "./context/audiophille/AudiophilleState";
 import CartState from "./context/cart/CartState";
 
 function App() {

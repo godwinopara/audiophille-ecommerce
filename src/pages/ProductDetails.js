@@ -1,8 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
-import AudioPhilleContext from "../context/audioPhileContext";
+import { Link } from "react-router-dom";
+import AudioPhilleContext from "../context/audiophille/audioPhileContext";
 import CartContext from "../context/cart/cartContext";
-
 import Layout from "../components/layout/Layout";
 import CategoryList from "../components/shared/CategoryList";
 import Picture from "../components/shared/Picture";
@@ -14,12 +14,12 @@ import Span from "../components/shared/Span";
 import Button from "../components/shared/Button";
 import Input from "../components/shared/Input";
 import Table from "../components/shared/Table";
-import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
   const { slug } = useParams();
   const { getProduct, product, isLoading } = useContext(AudioPhilleContext);
   const { addToCart, cart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     getProduct(slug);
@@ -30,7 +30,12 @@ const ProductDetails = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    addToCart({ name: product.cartName, image: product.cartImage, amount: `${product.price}` });
+    addToCart({
+      name: product.cartName,
+      image: product.cartImage,
+      amount: `${product.price}`,
+      quantity: quantity,
+    });
   };
 
   /* ******************* */
@@ -58,7 +63,7 @@ const ProductDetails = () => {
                 desktopImg={product.image.desktop}
                 tabletImg={product.image.tablet}
                 mobileImg={product.image.mobile}
-                classList="rounded xl"
+                classList="rounded-xl"
               />
             </div>
             <div className="flex-1 md:ml-28 xl:ml-48">
@@ -68,9 +73,17 @@ const ProductDetails = () => {
               <span className="inline-block font-bold text-3xl mb-12 tracking-widest uppercase">{`$${product.price}`}</span>
               <div className=" sm:flex items-center">
                 <div className="mb-8 flex items-center sm:mb-0 sm:mr-4">
-                  <Span text="-" classList="text-white-400 " />
-                  <Span text="0" />
-                  <Span text="+" classList="text-white-400" />
+                  <Span
+                    onClick={() => (quantity !== 0 ? setQuantity(quantity - 1) : 0)}
+                    text="-"
+                    classList="text-white-400 "
+                  />
+                  <Span text={quantity} />
+                  <Span
+                    onClick={() => setQuantity(quantity + 1)}
+                    text="+"
+                    classList="text-white-400"
+                  />
                 </div>
                 <Input
                   value="ADD TO CART"

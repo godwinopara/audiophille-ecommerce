@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ value, classList, onClick }) => {
+const Input = ({ value, classList, onClick, name }) => {
   return (
     <input
       type="button"
@@ -10,6 +10,7 @@ const Input = ({ value, classList, onClick }) => {
         ${classList}
         `}
       onClick={onClick}
+      name={name}
     />
   );
 };

@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, GET_PRODUCT, SET_LOADING } from "./types";
+import { GET_PRODUCTS, GET_PRODUCT, SET_LOADING } from "../types";
 
 const reducer = (state, action) => {
   switch (action.type) {

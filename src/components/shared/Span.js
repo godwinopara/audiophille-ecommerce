@@ -1,6 +1,7 @@
-const Span = ({ text, classList }) => {
+const Span = ({ text, classList, onClick }) => {
   return (
     <span
+      onClick={onClick}
       className={`
       inline-block font-bold tracking-widest leading-10 bg-white-100
       text-2xl py-5 px-9 hover:text-brown-100 hover:opacity-100

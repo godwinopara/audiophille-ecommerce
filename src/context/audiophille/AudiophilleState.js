@@ -1,8 +1,8 @@
 import { useReducer } from "react";
 import AudioPhileContext from "./audioPhileContext";
 import reducer from "./audioPhilleReducer";
-import Data from "../data";
-import { GET_PRODUCT, SET_LOADING } from "./types";
+import Data from "../../data";
+import { GET_PRODUCT, SET_LOADING } from "../types";
 
 const AudiophilleState = ({ children }) => {
   const initialState = {

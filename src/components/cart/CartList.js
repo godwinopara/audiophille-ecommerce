@@ -1,6 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import CartContext from "../../context/cart/cartContext";
+import ButtonCart from "./ButtonCart";
 
-const CartList = ({ productCartImg, productName, productAmount }) => {
+const CartList = ({ productCartImg, productName, productAmount, quantity }) => {
+  const { decreaseQuantity, increaseQuantity } = useContext(CartContext);
+
   return (
     <div className="flex items-center justify-between bg-white-300 mb-10 ">
       <div className="flex items-center">
@@ -15,13 +19,9 @@ const CartList = ({ productCartImg, productName, productAmount }) => {
         </div>
       </div>
       <div className="flex items-center  bg-white-300">
-        <span className="px-4 py-2 bg-white-100  inline-block cursor-pointer text-white-400 hover:text-brown-100">
-          -
-        </span>
-        <span className="px-4 py-2 font-bold bg-white-100  inline-block">0</span>
-        <span className="px-4 py-2 bg-white-100 text-white-400 cursor-pointer hover:text-brown-100  inline-block">
-          +
-        </span>
+        <ButtonCart onClick={() => decreaseQuantity(productName, quantity)} buttonText="-" />
+        <span className="px-4 py-2 font-bold bg-white-100  inline-block">{quantity}</span>
+        <ButtonCart onClick={() => increaseQuantity(productName, quantity)} buttonText="+" />
       </div>
     </div>
   );
