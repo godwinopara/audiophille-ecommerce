@@ -1,31 +1,38 @@
-import React from "react";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import { Fragment } from "react";
+import GoBackBtn from "../components/shared/GoBackBtn";
+import Heading4 from "../components/form/Heading4";
+import InputWrapper from "../components/form/InputWrapper";
 
 const Checkout = () => {
   return (
-    <div>
-      Home Headphones Speakers Earphones
+    <Fragment>
+      <Header />
+      <section className="max-w-screen-xxl mx-auto">
+        <GoBackBtn />
+
+        <form action="">
+          <div>
+            <Heading4 text="BILLING DETAILS" />
+            <div>
+              <InputWrapper inputType="text" labelText="Name" />
+              <InputWrapper inputType="text" labelText="Email Address" />
+              <InputWrapper inputType="number" labelText="Phone Number" />
+            </div>
+          </div>
+          <div>
+            <Heading4 text="SHIPPING INFO" />
+            <div>
+              <InputWrapper inputType="text" labelText="Address" />
+              <InputWrapper inputType="text" labelText="ZIP Code" />
+              <InputWrapper inputType="text" labelText="City" />
+              <InputWrapper inputType="text" labelText="Country" />
+            </div>
+          </div>
+        </form>
+      </section>
       <br />
-      {/* <!-- Cart Modal --> */}
-      Cart(3) Remove All
-      <br />
-      XX99 MK II x1 $2,999
-      <br />
-      XX59 x2 $899
-      <br />
-      YX1 x1 $599
-      <br />
-      Total $5,396
-      <br />
-      Checkout
-      {/* <!-- Cart modal end --> */}
-      <br />
-      Go back
-      <br />
-      Checkout
-      <br />
-      Billing details Name Email address Phone number
-      <br />
-      Shipping info Address ZIP code City Country
       <br />
       Payment details Payment method e-Money Cash on delivery e-Money number e-money PIN
       <br />
@@ -62,7 +69,8 @@ const Checkout = () => {
       audio. Come and visit our demo facility - we’re open 7 days a week.
       <br />
       Copyright 2021. All Rights Reserved
-    </div>
+      <Footer />
+    </Fragment>
   );
 };
 

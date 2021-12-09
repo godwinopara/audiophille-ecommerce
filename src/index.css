@@ -31,7 +31,7 @@ body {
   bottom: -16%;
 }
 
-/* SVG */
+/*FOOTER SOCIAL LINKS SVG */
 
 .social-icons {
   display: flex;
@@ -79,4 +79,18 @@ body {
 
 .instagram {
   mask: url("./assets/shared/desktop/icon-instagram.svg");
+}
+
+/* REMOVE ARROW FROM ALL NUMBER INPUT */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

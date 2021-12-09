@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 import AudioPhilleContext from "../context/audiophille/audioPhileContext";
 import CartContext from "../context/cart/cartContext";
 import Layout from "../components/layout/Layout";
@@ -14,6 +13,7 @@ import Span from "../components/shared/Span";
 import Button from "../components/shared/Button";
 import Input from "../components/shared/Input";
 import Table from "../components/shared/Table";
+import GoBackBtn from "../components/shared/GoBackBtn";
 
 const ProductDetails = () => {
   const { slug } = useParams();
@@ -47,11 +47,12 @@ const ProductDetails = () => {
       <Layout>
         <section className="px-10 xl:px-0 xl:max-w-screen-xxl xl:mx-auto">
           {/* ************************** */}
-          <div className="my-20 bg-opacity-50">
+          {/* <div className="my-20 bg-opacity-50">
             <Link className="opacity-50" to={`/${product.category}`}>
               Go Back
             </Link>
-          </div>
+          </div> */}
+          <GoBackBtn link={product.category} />
           {/* ******************************** */}
 
           {/* OVERLAY */}
