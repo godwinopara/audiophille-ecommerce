@@ -47,11 +47,6 @@ const ProductDetails = () => {
       <Layout>
         <section className="px-10 xl:px-0 xl:max-w-screen-xxl xl:mx-auto">
           {/* ************************** */}
-          {/* <div className="my-20 bg-opacity-50">
-            <Link className="opacity-50" to={`/${product.category}`}>
-              Go Back
-            </Link>
-          </div> */}
           <GoBackBtn link={product.category} />
           {/* ******************************** */}
 

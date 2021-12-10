@@ -94,3 +94,11 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+input::placeholder {
+  color: black;
+  opacity: 0.4;
+  letter-spacing: -0.025rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+}

@@ -3,13 +3,18 @@ import CartContext from "../../context/cart/cartContext";
 import CartList from "../cart/CartList";
 import Input from "../shared/Input";
 import Heading3 from "../shared/Heading3";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  let { cart, total, resetCart } = useContext(CartContext);
+  let { cart, total, resetCart, toggleDisplayCart } = useContext(CartContext);
 
   const handleClick = (e) => {
     e.preventDefault();
     resetCart();
+  };
+
+  const handleOnLinkClick = () => {
+    toggleDisplayCart();
   };
 
   return (
@@ -52,7 +57,15 @@ const Cart = () => {
             <li className="opacity-50">TOTAL</li>
             <li className="font-bold text-2xxl">$ {total}</li>
           </ul>
-          <Input classList="bg-brown-100 w-full text-white-300 cursor-pointer" value="CHECKOUT" />
+          {/* <Link
+            className="py-6 px-14 w-full text-white-300 cursor-pointer tracking-widest leading-7 block text-center bg-brown-100"
+            to="/checkout"
+          >
+            CHECKOUT
+          </Link> */}
+          <Link to="/checkout" onClick={handleOnLinkClick}>
+            <Input classList="bg-brown-100 w-full text-white-300 cursor-pointer" value="CHECKOUT" />
+          </Link>
         </div>
       </div>
     </Fragment>
