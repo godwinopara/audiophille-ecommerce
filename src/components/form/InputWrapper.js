@@ -3,7 +3,7 @@ import FormInput from "./FormInput";
 
 const InputWrapper = ({ labelText, placeholder, inputType }) => {
   return (
-    <div>
+    <div className="w-full">
       <Label text={labelText} />
       <FormInput inputType={inputType} placeholder={placeholder} />
     </div>

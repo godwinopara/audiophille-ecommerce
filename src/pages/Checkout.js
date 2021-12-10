@@ -12,6 +12,7 @@ import CartContext from "../context/cart/cartContext";
 import CartItemDetails from "../components/cart/CartItemDetails";
 import CostList from "../components/checkout/CostList";
 import Input from "../components/shared/Input";
+import cashPaymentImg from "../assets/shared/desktop/cash-payment.png";
 
 const Checkout = () => {
   const { cart, total } = useContext(CartContext);
@@ -31,7 +32,7 @@ const Checkout = () => {
             <Heading3 text="checkout" classList="sm:text-4xxl md:text-5xl" />
             <div>
               <Heading4 text="BILLING DETAILS" />
-              <div>
+              <div className="xl:grid xl:grid-cols-2 gap-x-6">
                 <InputWrapper inputType="text" labelText="Name" placeholder="Alexei Ward" />
                 <InputWrapper
                   inputType="text"
@@ -47,12 +48,14 @@ const Checkout = () => {
             </div>
             <div>
               <Heading4 text="SHIPPING INFO" />
-              <div>
-                <InputWrapper
-                  inputType="text"
-                  labelText="Address"
-                  placeholder="1137 William Avenue"
-                />
+              <div className="xl:grid xl:grid-cols-2 gap-x-6">
+                <div className="col-span-2">
+                  <InputWrapper
+                    inputType="text"
+                    labelText="Address"
+                    placeholder="1137 William Avenue"
+                  />
+                </div>
                 <InputWrapper inputType="text" labelText="ZIP Code" placeholder="10001" />
                 <InputWrapper inputType="text" labelText="City" placeholder="New York" />
                 <InputWrapper inputType="text" labelText="Country" placeholder="United States" />
@@ -61,9 +64,9 @@ const Checkout = () => {
 
             <div>
               <Heading4 text="PAYMENT DETAILS" />
-              <div className="xl:flex justify-between">
+              <div className="xl:flex xl:justify-between">
                 <Label text="Payment Method" />
-                <div>
+                <div className="xl:w-6/12">
                   <PaymentMethod
                     labelText="e-Money"
                     value="eMoney"
@@ -79,19 +82,30 @@ const Checkout = () => {
                 </div>
               </div>
 
-              {paymentMethod === "eMoney" && (
-                <div>
-                  <InputWrapper type="number" labelText="e-Money Number" placeholder="238531992" />
-                  <InputWrapper type="number" labelText="e-Money PIN" placeholder="6891" />
-                </div>
-              )}
+              <div className="my-12">
+                {paymentMethod === "eMoney" && (
+                  <div className="xl:grid xl:grid-cols-2 gap-x-6">
+                    <InputWrapper
+                      type="number"
+                      labelText="e-Money Number"
+                      placeholder="238531992"
+                    />
+                    <InputWrapper type="number" labelText="e-Money PIN" placeholder="6891" />
+                  </div>
+                )}
 
-              <div>
-                <p>
-                  The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier
-                  arrives at your residence. Just make sure your address is correct so that your
-                  order will not be cancelled.
-                </p>
+                {paymentMethod === "cashOnDelivery" && (
+                  <div className="md:flex">
+                    <div className="mb-10 w-1/3 ">
+                      <img src={cashPaymentImg} alt="" className="h-24 w-24" />
+                    </div>
+                    <p className="opacity-50">
+                      The ‘Cash on Delivery’ option enables you to pay in cash when our delivery
+                      courier arrives at your residence. Just make sure your address is correct so
+                      that your order will not be cancelled.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </form>
