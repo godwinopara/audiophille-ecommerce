@@ -10,6 +10,10 @@ module.exports = {
         100: "#D87D4A",
         200: "#FB8F85",
       },
+      red: {
+        100: "#cd2c2c",
+      },
+
       gray: {
         100: "#cfcfcf",
       },
