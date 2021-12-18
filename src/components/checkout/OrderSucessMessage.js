@@ -18,7 +18,7 @@ const OrderSucessMessage = () => {
       {/* OVERLAY END */}
 
       {/* SUCCESS MESSAGE CONTENT */}
-      <div className="px-7 py-14 sm:px-14 absolute  top-80 w-6/6  max-w-4xl bg-white-300 rounded-xl">
+      <div className="px-7 py-14 sm:px-14 fixed  top-40 w-6/6  max-w-4xl bg-white-300 rounded-xl z-20">
         <div className="h-24 w-24 bg-brown-100 grid place-items-center rounded-full mb-9">
           <span className="text-5xl text-white-300">&#10004;</span>
         </div>
