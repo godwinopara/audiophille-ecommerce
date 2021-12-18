@@ -11,7 +11,7 @@ const FormikInput = ({ label, ...props }) => {
         >
           {label}
         </label>
-        <span className="text-red-100">{meta.error}</span>
+        <span className="text-red-100 block">{meta.touched && meta.error ? meta.error : null}</span>
       </div>
       <input
         className={`border-2 ${meta.touched && meta.error ? "border-red-100" : "border-gray-100"}

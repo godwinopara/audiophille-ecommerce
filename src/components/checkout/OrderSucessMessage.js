@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
-import cartImages from "../image/cartImage";
 import CartItemDetails from "../cart/CartItemDetails";
 import CartContext from "../../context/cart/cartContext";
 
@@ -34,7 +33,7 @@ const OrderSucessMessage = () => {
         <div>
           <div className="my-10  rounded-xl overflow-hidden md:grid md:grid-cols-2">
             <div className="h-full bg-white-100 px-10 py-5">
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mb-6">
                 <CartItemDetails
                   productCartImg={cart[0].image}
                   productAmount={cart[0].amount}
@@ -48,7 +47,7 @@ const OrderSucessMessage = () => {
                 cart.map((item, id) => {
                   if (id !== 0) {
                     return (
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-between items-center mb-6">
                         <CartItemDetails
                           productCartImg={item.image}
                           productAmount={item.amount}

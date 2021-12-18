@@ -112,18 +112,18 @@ const Checkout = () => {
                   </div>
 
                   <div className="my-12">
-                    {paymentMethod === "eMoney" && (
+                    {paymentMethod === "eMoney" ? (
                       <div className="xl:grid xl:grid-cols-2 gap-x-6">
-                        <InputWrapper
-                          type="number"
-                          labelText="e-Money Number"
+                        <FormikInput
+                          name="e-money"
+                          label="e-Money Number"
                           placeholder="238531992"
                         />
-                        <InputWrapper type="number" labelText="e-Money PIN" placeholder="6891" />
+                        <FormikInput name="pin" label="e-Money PIN" placeholder="6891" />
                       </div>
-                    )}
+                    ) : null}
 
-                    {paymentMethod === "cashOnDelivery" && (
+                    {paymentMethod === "cashOnDelivery" ? (
                       <div className="md:flex">
                         <div className="mb-10 w-1/3 ">
                           <img src={cashPaymentImg} alt="" className="h-24 w-24" />
@@ -134,7 +134,7 @@ const Checkout = () => {
                           so that your order will not be cancelled.
                         </p>
                       </div>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -168,8 +168,11 @@ const Checkout = () => {
                 </ul>
 
                 <button
+                  disabled={cart.length < 1 ? "disabled" : null}
                   type="submit"
-                  className="uppercase font-bold h-20 bg-brown-100 text-white-300 w-full my-12 cursor-pointer hover:bg-brown-200"
+                  className={`uppercase font-bold h-20 bg-brown-100 text-white-300 w-full my-12 hover:bg-brown-200 ${
+                    cart.length > 0 ? "cursor-pointer" : "cursor-not-allowed"
+                  }`}
                 >
                   Continue & pay
                 </button>
