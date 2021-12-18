@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+## Frontend Mentor - Audiophile e-commerce website solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Audiophile e-commerce website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add/Remove products from the cart
+- Edit product quantities in the cart
+- Fill in all fields in the checkout
+- Receive form validations if fields are missed or incorrect during checkout
+- See correct checkout totals depending on the products in the cart
+  - Shipping always adds $50 to the order
+  - VAT is calculated as 20% of the product total, excluding shipping
+- See an order confirmation modal after checking out with an order summary
+- **Bonus**: Keep track of what's in the cart, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)
 
-### `npm run build`
+### Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](./preview.jpg)
+![](./React-App.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- JSX
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [React Router](https://reactrouter.com/) - For Routes
+- [Formik](https://formik.org) - For Form
+- [Yup](https://github.com/jquense/yup) - For Form Validation
+- [Tailwind Css](https://tailwindcss.com/) - For styles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What I learned
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- I decided to use Tailwind since i wanted to learn Tailwind.. Tailwind is pretty cool! I was really against using Tailwind. Mostly because of how it makes HTML look 'messy'. While that still remains the case I was pleasantly surprised by how intuitive it became. Also the ease with which you can build components was welcomed.
+- I also learnt how to use Formik and Yup for form validations.. i was amazed on how super easy and stress free it was to set up form validations with formik and yup and also with less code.
 
-## Learn More
+- if your are using react router, By default if you have a long content page and then you navigate to another long content page, you will stay scrolled down. This behavior doesn’t make lots of sense because not many people like to read text upside down. i had to google how to scroll to the top when a user navigate to another page so i found this solution:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Create a wrapper component that handles scroll restoration for you:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```jsx
+// ScrollToTop.jsx
+// ScrollToTop Wrapper
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 
-### Code Splitting
+const ScrollToTop = (props) => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  return <>{props.children}</>;
+};
+```
 
-### Analyzing the Bundle Size
+- Wrap the ScrollToTop Wrapper component round your application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```jsx
+// App.jsx
 
-### Making a Progressive Web App
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+import LandingPage from "./LandingPage";
+import ProductPage from "./ProductPage";
+import ScrollToTop from "./ScrollToTop";
 
-### Advanced Configuration
+const App = () => {
+  return (
+    <Router>
+      <ScrollToTop>
+        <Switch>
+          <Route path="/" exact>
+            <LandingPage />
+          </Route>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+          <Route path="/product">
+            <ProductPage />
+          </Route>
+        </Switch>
+      </ScrollToTop>
+    </Router>
+  );
+};
+```
 
-### Deployment
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Godwin Opara](https://godwin-ahamefula.netlify.app/)
+- Frontend Mentor - [@godwinopara](https://www.frontendmentor.io/profile/godwinopara)
+- Twitter - [@godwinopara12](https://www.twitter.com/godwinopara12)
