@@ -3,7 +3,6 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import GoBackBtn from "../components/shared/GoBackBtn";
 import Heading4 from "../components/form/Heading4";
-import InputWrapper from "../components/form/InputWrapper";
 import PaymentMethod from "../components/form/PaymentMethod";
 import Label from "../components/form/Label";
 import Heading3 from "../components/shared/Heading3";
