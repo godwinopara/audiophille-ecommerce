@@ -20,6 +20,7 @@ module.exports = {
       black: {
         100: "#101010",
         200: "#000000",
+        300: "#999999",
       },
       white: {
         100: "#F1F1F1",
@@ -33,6 +34,14 @@ module.exports = {
       screens: {
         sm: "375px",
         xxl: "1100px",
+      },
+
+      height: {
+        h: "1px",
+      },
+
+      width: {
+        "6/6": "85%",
       },
 
       backgroundSize: {

@@ -17,9 +17,12 @@ import cashPaymentImg from "../assets/shared/desktop/cash-payment.png";
 import { Formik, Form } from "formik";
 import FormikInput from "../components/form/FormikInput";
 import { formValidation } from "../components/form/FormikValidation";
+import OrderSucessMessage from "../components/checkout/OrderSucessMessage";
 
 const Checkout = () => {
   const { cart, total } = useContext(CartContext);
+  const [paymentMethod, setPaymentMethod] = useState("eMoney");
+  const [showOrderSuccessModel, setShowOrderSuccessModel] = useState(false);
 
   /* Default Values for various input fields */
 
@@ -33,14 +36,12 @@ const Checkout = () => {
     country: "",
   };
 
-  const [paymentMethod, setPaymentMethod] = useState("eMoney");
-
   const handleOnChange = (e) => {
     setPaymentMethod(e.target.value);
   };
 
   const handleSubmit = (values) => {
-    console.log(values);
+    setShowOrderSuccessModel(!showOrderSuccessModel);
   };
 
   return (
@@ -59,7 +60,9 @@ const Checkout = () => {
             <div className="xl:grid xl:grid-cols-3 gap-x-12">
               <div className="col-span-2">
                 <Heading3 text="checkout" classList="sm:text-4xxl md:text-5xl" />
+                {/* ************ */}
                 <Heading4 text="BILLING DETAILS" />
+                {/* ********* */}
                 <div className="xl:grid xl:grid-cols-2 gap-x-6">
                   <FormikInput name="name" label="Name" placeholder="Alexei Ward" />
                   <FormikInput name="email" label="Email" placeholder="alexei@mail.com" />
@@ -69,6 +72,9 @@ const Checkout = () => {
                     placeholder="+1 202-555-0136"
                   />
                 </div>
+
+                {/* ***** */}
+
                 <div>
                   <Heading4 text="SHIPPING INFO" />
                   <div className="xl:grid xl:grid-cols-2 gap-x-6">
@@ -139,8 +145,8 @@ const Checkout = () => {
                 <h5 className="my-12 font-bold text-3xl">SUMMARY</h5>
 
                 {/* GET THE CART ITEMS FROM THE CONTEXT API AND LOOP THROUGH AND DISPLAY THE ITEMS */}
-                {cart.map((item) => (
-                  <div className="flex justify-between items-center mb-10">
+                {cart.map((item, id) => (
+                  <div key={id} className="flex justify-between items-center mb-10">
                     <CartItemDetails
                       productCartImg={item.image}
                       productName={item.name}
@@ -163,7 +169,7 @@ const Checkout = () => {
 
                 <button
                   type="submit"
-                  className="uppercase font-bold bg-brown-100 text-white-300 w-full my-12 cursor-pointer hover:bg-brown-200"
+                  className="uppercase font-bold h-20 bg-brown-100 text-white-300 w-full my-12 cursor-pointer hover:bg-brown-200"
                 >
                   Continue & pay
                 </button>
@@ -172,27 +178,8 @@ const Checkout = () => {
           </Form>
         </Formik>
       </section>
-      {/*
-      Summary XX99 MK II x1 $2,999
-      <br />
-      XX59 x2 $899
-      <br />
-      YX1 x1 $599
-      <br />
-      Total $5,396 Shipping $10 VAT $120
-      <br />
-      Grand total $5,526
-      <br />
-      Continue & pay
-      <br /> */}
 
-      {/* Thank you for your order You will receive an email confirmation shortly.
-      <br />
-      XX99 MK II x 1 $2,999 and 2 other item(s)
-      <br />
-      Grand total $5,526
-      <br />
-      Back to home */}
+      {showOrderSuccessModel && <OrderSucessMessage />}
 
       <Footer />
     </Fragment>
