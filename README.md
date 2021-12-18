@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [view solution](hhttps://www.frontendmentor.io/solutions/responsive-audio-ecommerce-store-bPxU3fBEG)
+- Live Site URL: [view live site](https://audiophile-e-commerce.netlify.app/)
 
 ## My process
 
