@@ -114,6 +114,6 @@ const App = () => {
 
 ## Author
 
-- Website - [Godwin Opara](https://godwin-ahamefula.netlify.app/)
+- Website - [Godwin Opara](https://godwinopara.tech)
 - Frontend Mentor - [@godwinopara](https://www.frontendmentor.io/profile/godwinopara)
 - Twitter - [@godwinopara12](https://www.twitter.com/godwinopara12)
