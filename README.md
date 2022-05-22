@@ -4,7 +4,6 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
 
 ## Table of contents
 
-- [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -13,9 +12,8 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## Overview
+
 
 ### The challenge
 
